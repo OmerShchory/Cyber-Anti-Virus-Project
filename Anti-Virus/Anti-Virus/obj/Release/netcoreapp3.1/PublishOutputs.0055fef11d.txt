@@ -1,0 +1,5 @@
+C:\Omer\Cyber-Anti-Virus-Project\Anti-Virus\Anti-Virus\bin\Release\netcoreapp3.1\publish\Anti-Virus.exe
+C:\Omer\Cyber-Anti-Virus-Project\Anti-Virus\Anti-Virus\bin\Release\netcoreapp3.1\publish\Anti-Virus.dll
+C:\Omer\Cyber-Anti-Virus-Project\Anti-Virus\Anti-Virus\bin\Release\netcoreapp3.1\publish\Anti-Virus.deps.json
+C:\Omer\Cyber-Anti-Virus-Project\Anti-Virus\Anti-Virus\bin\Release\netcoreapp3.1\publish\Anti-Virus.runtimeconfig.json
+C:\Omer\Cyber-Anti-Virus-Project\Anti-Virus\Anti-Virus\bin\Release\netcoreapp3.1\publish\Anti-Virus.pdb
