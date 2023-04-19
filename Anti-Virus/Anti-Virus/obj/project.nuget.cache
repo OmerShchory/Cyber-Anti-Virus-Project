@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OxXYxmyzIupFWtjdwJ4T3dQUiZAiXQSrXBItXKmkm8wEcoyj/Taw+KbE2Woj7qzg8cxp4M6HNbOK8E14ms/RsA==",
+  "dgSpecHash": "QR+wyZiK/eshlSJp/wxbhVh+M6EfqO16lnBOSRymUV/uKBRvXS86vTWIcEJy9/WftGRC49Fg8BLteIUDnw/TNg==",
   "success": true,
-  "projectFilePath": "C:\\Omer\\Cyber-Anti-Virus-Project\\Anti-Virus\\Anti-Virus\\Anti-Virus.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus\\Anti-Virus\\Anti-Virus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }

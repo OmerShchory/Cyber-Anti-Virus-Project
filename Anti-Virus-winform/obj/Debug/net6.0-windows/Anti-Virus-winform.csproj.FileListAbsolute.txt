@@ -1,0 +1,17 @@
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\net6.0-windows\Anti-Virus-winform.exe
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\net6.0-windows\Anti-Virus-winform.deps.json
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\net6.0-windows\Anti-Virus-winform.runtimeconfig.json
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\net6.0-windows\Anti-Virus-winform.dll
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\net6.0-windows\Anti-Virus-winform.pdb
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti_Virus_winform.Form1.resources
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.AssemblyInfo.cs
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.dll
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\refint\Anti-Virus-winform.dll
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.pdb
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\Anti-Virus-winform.genruntimeconfig.cache
+C:\Users\USER\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\obj\Debug\net6.0-windows\ref\Anti-Virus-winform.dll
