@@ -15,6 +15,7 @@ namespace Anti_Virus_winform
         {
             Thread thread = new Thread(ScannerThread);
             thread.Start();
+
         }
 
         public void QueueFileForScan(string filename)

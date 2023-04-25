@@ -37,20 +37,67 @@ namespace Anti_Virus_winform
 
         AVEngine engine = new AVEngine();
 
+        // This function will run in a seperate thread and willl automaticly enqueue the paths
+        // for the critical folders for a scan with 5 seconds delay
+        private void scanCriticalFolders()
+        {
+            string folderPath = @"C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan";
+            while (true)
+            {
+                string[] files = Directory.GetFiles(folderPath);
+                foreach (string file in files)
+                {
+                    engine.QueueFileForScan(file);
+                }
+                Task.Delay(5000).Wait();
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
             InitializeConsole();
             engine.Start();
+            Thread thread = new Thread(scanCriticalFolders);
+            thread.Start();
+        }
+        
+        // Event handler for initiated folder scan
+        private void menualFolderScanBtn_Click(object sender, EventArgs e)
+        {
+            //string folderPath = @"C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\bin\\Debug\\to scan\";
+
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                DialogResult result = folderDialog.ShowDialog();
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+                {
+                    string selectedFolder = folderDialog.SelectedPath;
+                    Console.WriteLine(selectedFolder);
+                    // Do something with the selected folder path, such as scan it for malware.
+                    string[] files = Directory.GetFiles(selectedFolder);
+                    foreach (string file in files)
+                    {
+                        engine.QueueFileForScan(file);
+                    }
+                }
+            }
         }
 
-        private void menualScanBtn_Click(object sender, EventArgs e)
+        // Event handler for initiated file scan
+        private void menualFileScanBtn_Click(object sender, EventArgs e)
         {
-            string folderPath = @"C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\bin\\Debug\\to scan\";
-            string[] files = Directory.GetFiles(folderPath);
-            foreach (string file in files)
+            using (var openFileDialog = new OpenFileDialog())
             {
-                engine.QueueFileForScan(file); 
+                openFileDialog.Filter = "All files (*.*)|*.*";
+                openFileDialog.InitialDirectory = "C:\\";
+                openFileDialog.Title = "Select file to scan";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+                    engine.QueueFileForScan(filePath);
+                }
             }
         }
     }
