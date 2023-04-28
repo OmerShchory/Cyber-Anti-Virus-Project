@@ -1,6 +1,7 @@
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace Anti_Virus_winform
 {
@@ -55,11 +56,20 @@ namespace Anti_Virus_winform
 
         public Form1()
         {
+            // Initialize Form and Console window
             InitializeComponent();
             InitializeConsole();
+
+            // Start the rngine of the AV 
             engine.Start();
-            Thread thread = new Thread(scanCriticalFolders);
-            thread.Start();
+
+            // automaticly scan critical folders
+            //Thread thread = new Thread(scanCriticalFolders);
+            //thread.Start();
+
+            // Initialize FS watcher
+            FolderWatcher watcher = new FolderWatcher();
+            watcher.watch(@"C:\Users\omrir\Desktop\stam");
         }
         
         // Event handler for initiated folder scan
