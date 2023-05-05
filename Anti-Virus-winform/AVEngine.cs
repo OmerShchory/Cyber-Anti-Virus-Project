@@ -10,12 +10,14 @@ namespace Anti_Virus_winform
     {
         private Queue<string> FilesToScan = new Queue<string>();
         public Queue<string> BadFiles = new Queue<string>();
+        public FileScanner fs;
+
 
         public void Start()
         {
+            fs = new FileScanner();
             Thread thread = new Thread(ScannerThread);
             thread.Start();
-
         }
 
         public void QueueFileForScan(string filename)
@@ -46,7 +48,7 @@ namespace Anti_Virus_winform
                 if (fileToScan != null)
                 {
                     // Now, scan the file
-                    if (FileScanner.Scan(fileToScan))
+                    if (fs.Scan(fileToScan))
                     {
                         /*lock(BadFiles)
                         {

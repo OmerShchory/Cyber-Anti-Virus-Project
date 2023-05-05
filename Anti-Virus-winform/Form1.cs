@@ -69,7 +69,7 @@ namespace Anti_Virus_winform
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher();
-            watcher.watch(@"C:\Users\omrir\Desktop\stam");
+            watcher.watch(@"C:\Users\USER\Desktop\stam");
         }
         
         // Event handler for initiated folder scan

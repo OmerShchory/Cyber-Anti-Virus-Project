@@ -8,23 +8,25 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\omrir\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omrir\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\Anti-Virus-winform.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\Anti-Virus-winform.csproj",
       "projectName": "Anti-Virus-winform",
-      "projectPath": "C:\\Users\\omrir\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\Anti-Virus-winform.csproj",
-      "packagesPath": "C:\\Users\\omrir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omrir\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\Anti-Virus-winform.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\omrir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
