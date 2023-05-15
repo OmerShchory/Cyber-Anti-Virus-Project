@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             title = new Label();
-            menualFolderScanBtn = new Button();
-            menualScanFD = new FolderBrowserDialog();
-            menualFileScanBtn = new Button();
+            manualFolderScanBtn = new Button();
+            manualFileScanBtn = new Button();
             SuspendLayout();
             // 
             // title
@@ -44,36 +43,36 @@
             title.TabIndex = 0;
             title.Text = "O2 Anti-Virus";
             // 
-            // menualFolderScanBtn
+            // manualFolderScanBtn
             // 
-            menualFolderScanBtn.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            menualFolderScanBtn.Location = new Point(65, 169);
-            menualFolderScanBtn.Margin = new Padding(3, 4, 3, 4);
-            menualFolderScanBtn.Name = "menualFolderScanBtn";
-            menualFolderScanBtn.Size = new Size(256, 85);
-            menualFolderScanBtn.TabIndex = 2;
-            menualFolderScanBtn.Text = "menual folder scan";
-            menualFolderScanBtn.UseVisualStyleBackColor = true;
-            menualFolderScanBtn.Click += menualFolderScanBtn_Click;
+            manualFolderScanBtn.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            manualFolderScanBtn.Location = new Point(65, 169);
+            manualFolderScanBtn.Margin = new Padding(3, 4, 3, 4);
+            manualFolderScanBtn.Name = "manualFolderScanBtn";
+            manualFolderScanBtn.Size = new Size(256, 85);
+            manualFolderScanBtn.TabIndex = 2;
+            manualFolderScanBtn.Text = "manual folder scan";
+            manualFolderScanBtn.UseVisualStyleBackColor = true;
+            manualFolderScanBtn.Click += manualFolderScanBtn_Click;
             // 
-            // menualFileScanBtn
+            // manualFileScanBtn
             // 
-            menualFileScanBtn.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            menualFileScanBtn.Location = new Point(65, 275);
-            menualFileScanBtn.Name = "menualFileScanBtn";
-            menualFileScanBtn.Size = new Size(256, 85);
-            menualFileScanBtn.TabIndex = 3;
-            menualFileScanBtn.Text = "menual file scan";
-            menualFileScanBtn.UseVisualStyleBackColor = true;
-            menualFileScanBtn.Click += menualFileScanBtn_Click;
+            manualFileScanBtn.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            manualFileScanBtn.Location = new Point(65, 275);
+            manualFileScanBtn.Name = "manualFileScanBtn";
+            manualFileScanBtn.Size = new Size(256, 85);
+            manualFileScanBtn.TabIndex = 3;
+            manualFileScanBtn.Text = "manual file scan";
+            manualFileScanBtn.UseVisualStyleBackColor = true;
+            manualFileScanBtn.Click += manualFileScanBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1231, 739);
-            Controls.Add(menualFileScanBtn);
-            Controls.Add(menualFolderScanBtn);
+            Controls.Add(manualFileScanBtn);
+            Controls.Add(manualFolderScanBtn);
             Controls.Add(title);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
@@ -85,8 +84,7 @@
         #endregion
 
         private Label title;
-        private Button menualFolderScanBtn;
-        private FolderBrowserDialog menualScanFD;
-        private Button menualFileScanBtn;
+        private Button manualFolderScanBtn;
+        private Button manualFileScanBtn;
     }
 }

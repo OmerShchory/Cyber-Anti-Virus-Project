@@ -6,15 +6,29 @@ using System.Threading.Tasks;
 
 namespace Anti_Virus_winform
 {
-    internal class FileScanner
+    public class FileScanner
     {
         //private static byte[] VIRUS_FILE = { 0x36, 0x1f, 0xad, 0xf1, 0xc7, 0x12, 0xe8, 0x12, 0xd1, 0x98, 0xc4, 0xca, 0xb5, 0x71, 0x2a, 0x79 };
         List<byte[]> blackList;
-
+        List<byte[]> whiteList;
 
         public FileScanner()
         { 
-            this.blackList = readBlackList();    
+            this.blackList = readFromFileToList(AVFfiles.readBlackList());
+            this.whiteList = readFromFileToList(AVFfiles.readWhiteList());    
+        }
+
+        public static byte[] ConvertHexStringToByteArray(string hexString)
+        {
+            byte[] byteArray = new byte[hexString.Length / 2];
+
+            for (int i = 0; i < hexString.Length; i += 2)
+            {
+                string byteString = hexString.Substring(i, 2);
+                byteArray[i / 2] = Convert.ToByte(byteString, 16);
+            }
+
+            return byteArray;
         }
 
         //private static string[] lines = readBlackList();
@@ -66,15 +80,17 @@ namespace Anti_Virus_winform
         }
 
         // Read the Black List from file and store it for comparisons
-        private static List<byte[]> readBlackList()
+        private static List<byte[]> readFromFileToList(string[] byteAttayFromFile)
         {
-            List<byte[]> blackList = new List<byte[]>();    
-            string[] lines = AVFfiles.readBlackList();
-            for (int i = 0; i < lines.Length ; i++)
+            List<byte[]> listToReturn = new List<byte[]>();    
+            for (int i = 0; i < byteAttayFromFile.Length ; i++)
             {
-                 blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
+                listToReturn.Add(ConvertHexStringToByteArray(byteAttayFromFile[i]));
+                //blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
             }
-            return blackList;
+            return listToReturn;
         }
+
+
     }
 }

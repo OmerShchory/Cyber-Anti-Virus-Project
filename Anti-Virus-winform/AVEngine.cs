@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Anti_Virus_winform
 {
-    internal class AVEngine
+    public class AVEngine
     {
         private Queue<string> FilesToScan = new Queue<string>();
         public Queue<string> BadFiles = new Queue<string>();

@@ -68,12 +68,14 @@ namespace Anti_Virus_winform
             //thread.Start();
 
             // Initialize FS watcher
-            FolderWatcher watcher = new FolderWatcher();
-            watcher.watch(@"C:\Users\USER\Desktop\stam");
+            FolderWatcher watcher = new FolderWatcher(engine);
+            watcher.watch(@"C:\Users\omrir\Desktop\stam");
+
+            //AVFfiles.WriteLog("O2 Anti Virus Is Running");
         }
-        
+
         // Event handler for initiated folder scan
-        private void menualFolderScanBtn_Click(object sender, EventArgs e)
+        private void manualFolderScanBtn_Click(object sender, EventArgs e)
         {
             //string folderPath = @"C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\bin\\Debug\\to scan\";
 
@@ -95,7 +97,7 @@ namespace Anti_Virus_winform
         }
 
         // Event handler for initiated file scan
-        private void menualFileScanBtn_Click(object sender, EventArgs e)
+        private void manualFileScanBtn_Click(object sender, EventArgs e)
         {
             using (var openFileDialog = new OpenFileDialog())
             {
