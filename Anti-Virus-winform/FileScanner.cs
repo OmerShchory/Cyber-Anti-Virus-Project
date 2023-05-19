@@ -39,7 +39,7 @@ namespace Anti_Virus_winform
         /// </summary>
         /// <param name="filename">File to scan</param>
         /// <returns></returns>
-        public bool Scan(string filename)
+        public string[] Scan(string filename)
         {
             byte[] file_bytes = File.ReadAllBytes(filename);
 
@@ -50,15 +50,31 @@ namespace Anti_Virus_winform
                 hash = md5.Hash;
             }
 
+            string[] res = { "", filename };
             // Compare file to Black List and return true if found a match match
             for (int i = 0; i < blackList.Count(); i++)
             {
                 if (CompareBytes(hash, this.blackList[i]))
                 {
-                    return true;
+                    // REturn 1 if the file is detected as a virus
+                    res[0] = "1"; 
+                    return res;
                 }
             }
-            return false;
+
+            for (int i = 0; i < whiteList.Count(); i++)
+            {
+                if (CompareBytes(hash, this.whiteList[i]))
+                {
+                    // Return 2 if the file is detected as known non virus
+                    res[0] = "2";
+                    return res;
+                }
+            }
+
+            // Return 3 if the file is unknown
+            res[0] = "3";
+            return res;
         }
 
         private static bool CompareBytes(byte[] lhs, byte[] rhs)
@@ -80,12 +96,12 @@ namespace Anti_Virus_winform
         }
 
         // Read the Black List from file and store it for comparisons
-        private static List<byte[]> readFromFileToList(string[] byteAttayFromFile)
+        private static List<byte[]> readFromFileToList(string[] byteArrayFromFile)
         {
             List<byte[]> listToReturn = new List<byte[]>();    
-            for (int i = 0; i < byteAttayFromFile.Length ; i++)
+            for (int i = 0; i < byteArrayFromFile.Length ; i++)
             {
-                listToReturn.Add(ConvertHexStringToByteArray(byteAttayFromFile[i]));
+                listToReturn.Add(ConvertHexStringToByteArray(byteArrayFromFile[i]));
                 //blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
             }
             return listToReturn;

@@ -18,23 +18,27 @@ namespace Anti_Virus_winform
         {
             Console.WriteLine($"File created: {e.FullPath}");
             engine.QueueFileForScan(e.FullPath);
+            AVFfiles.WriteLog(e.FullPath);
         }
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
         {
             Console.WriteLine($"File deleted: {e.FullPath}");
+            AVFfiles.WriteLog(e.FullPath);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
             Console.WriteLine($"File renamed from {e.OldFullPath} to {e.FullPath}");
             engine.QueueFileForScan(e.FullPath);
+            AVFfiles.WriteLog(e.FullPath);
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
             Console.WriteLine($"File changed: {e.FullPath}");
             engine.QueueFileForScan(e.FullPath);
+            AVFfiles.WriteLog(e.FullPath);
         }
 
         public void watch(string path)

@@ -9,7 +9,6 @@ namespace Anti_Virus_winform
     public class AVEngine
     {
         private Queue<string> FilesToScan = new Queue<string>();
-        public Queue<string> BadFiles = new Queue<string>();
         public FileScanner fs;
 
 
@@ -47,18 +46,26 @@ namespace Anti_Virus_winform
 
                 if (fileToScan != null)
                 {
+                    string[] result = fs.Scan(fileToScan);
+                    string msg;
                     // Now, scan the file
-                    if (fs.Scan(fileToScan))
+                    if (result[0] == "1")
                     {
-                        /*lock(BadFiles)
-                        {
-                            BadFiles.Enqueue(fileToScan);
-                        }*/
-                        Console.WriteLine("A VIRUS WAS DETECTED");
+                        msg = "A VIRUS WAS DETECTED" + " | Path: " + result[1];
+                        AVFfiles.WriteLog(msg);
+                        Console.WriteLine(msg);
+                    }
+                    else if (result[0] == "2") 
+                    {
+                        msg = "A safe file was scanned." + " | Path: " + result[1];
+                        AVFfiles.WriteLog(msg);
+                        Console.WriteLine(msg);
                     }
                     else
                     {
-                        Console.WriteLine("A safe file was scanned.");
+                        msg = "An unknown file was detected" + " | Path: " + result[1];
+                        AVFfiles.WriteLog(msg);
+                        Console.WriteLine(msg);
                     }
                 }
             }

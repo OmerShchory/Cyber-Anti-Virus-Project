@@ -112,5 +112,30 @@ namespace Anti_Virus_winform
                 }
             }
         }
+
+        private void printLogBtn_Click(object sender, EventArgs e)
+        {
+            string filePath = "../utils/log.txt";
+
+            try
+            {
+                // Read the contents of the file
+                string fileContent = File.ReadAllText(filePath);
+
+                // Set the TextBox text to the file content
+                displayTextBox.Text = fileContent;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur while reading the file
+                MessageBox.Show("Error reading the file: " + ex.Message);
+            }
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            // Clear the TextBox
+            displayTextBox.Text = string.Empty;
+        }
     }
 }
