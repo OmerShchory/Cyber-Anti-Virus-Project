@@ -16,29 +16,32 @@ namespace Anti_Virus_winform
 
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"File created: {e.FullPath}");
-            engine.QueueFileForScan(e.FullPath);
-            AVFfiles.WriteLog(e.FullPath);
+            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File created");
+            engine.QueueFileForScan(fts);
+            Console.WriteLine(fts.ToString());
+            AVFfiles.WriteLog(fts.ToString());
         }
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
         {
             Console.WriteLine($"File deleted: {e.FullPath}");
-            AVFfiles.WriteLog(e.FullPath);
+            AVFfiles.WriteLog("File deleted:" + e.FullPath);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
-            Console.WriteLine($"File renamed from {e.OldFullPath} to {e.FullPath}");
-            engine.QueueFileForScan(e.FullPath);
-            AVFfiles.WriteLog(e.FullPath);
+            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File renamed");
+            engine.QueueFileForScan(fts);
+            Console.WriteLine(fts.ToString());
+            AVFfiles.WriteLog(fts.ToString());
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"File changed: {e.FullPath}");
-            engine.QueueFileForScan(e.FullPath);
-            AVFfiles.WriteLog(e.FullPath);
+            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File changed");
+            engine.QueueFileForScan(fts);
+            Console.WriteLine(fts.ToString());
+            AVFfiles.WriteLog(fts.ToString());
         }
 
         public void watch(string path)

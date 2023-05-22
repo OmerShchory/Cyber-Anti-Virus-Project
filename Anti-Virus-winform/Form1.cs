@@ -40,19 +40,19 @@ namespace Anti_Virus_winform
 
         // This function will run in a seperate thread and willl automaticly enqueue the paths
         // for the critical folders for a scan with 5 seconds delay
-        private void scanCriticalFolders()
-        {
-            string folderPath = @"C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan";
-            while (true)
-            {
-                string[] files = Directory.GetFiles(folderPath);
-                foreach (string file in files)
-                {
-                    engine.QueueFileForScan(file);
-                }
-                Task.Delay(5000).Wait();
-            }
-        }
+        //private void scanCriticalFolders()
+        //{
+        //    string folderPath = @"C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan";
+        //    while (true)
+        //    {
+        //        string[] files = Directory.GetFiles(folderPath);
+        //        foreach (string file in files)
+        //        {
+        //            engine.QueueFileForScan(file);
+        //        }
+        //        Task.Delay(5000).Wait();
+        //    }
+        //}
 
         public Form1()
         {
@@ -90,7 +90,7 @@ namespace Anti_Virus_winform
                     string[] files = Directory.GetFiles(selectedFolder);
                     foreach (string file in files)
                     {
-                        engine.QueueFileForScan(file);
+                        engine.QueueFileForScan(new FileToScan(file,"Initiated scan"));
                     }
                 }
             }
@@ -108,7 +108,7 @@ namespace Anti_Virus_winform
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-                    engine.QueueFileForScan(filePath);
+                    engine.QueueFileForScan(new FileToScan(filePath,"Initiated scan"));
                 }
             }
         }

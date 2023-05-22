@@ -2,3 +2,8 @@
 19/05/2023 11:52:41 - C:\Users\omrir\Desktop\stam\‏‏מסמך טקסט חדש.txt
 19/05/2023 11:53:12 - C:\Users\omrir\Desktop\stam\aaaa.txt
 19/05/2023 12:00:18 - C:\Users\omrir\Desktop\stam\aaaa.txt
+22/05/2023 18:37:51 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\package.json
+22/05/2023 18:42:26 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\querry.json Source: Initiated scan
+22/05/2023 18:43:45 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\querry.json | Source: Initiated scan
+22/05/2023 18:44:13 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\‏‏מסמך טקסט חדש.txt | Source: Reactive scan Event: File created
+22/05/2023 18:44:14 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\xcvxc.txt | Source: Reactive scan Event: File renamed

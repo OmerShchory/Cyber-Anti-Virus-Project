@@ -8,7 +8,7 @@ namespace Anti_Virus_winform
 {
     public class AVEngine
     {
-        private Queue<string> FilesToScan = new Queue<string>();
+        private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
 
 
@@ -19,11 +19,11 @@ namespace Anti_Virus_winform
             thread.Start();
         }
 
-        public void QueueFileForScan(string filename)
+        public void QueueFileForScan(FileToScan file)
         {
             lock (FilesToScan)
             {
-                FilesToScan.Enqueue(filename);
+                FilesToScan.Enqueue(file);
             }
         }
 
@@ -31,7 +31,7 @@ namespace Anti_Virus_winform
         {
             while (true) // Scanner thread loops until the program exits
             {
-                string fileToScan = null; // To hold what we take out of the queue
+                FileToScan fileToScan = null; // To hold what we take out of the queue
                 lock (FilesToScan)
                 {
                     try
@@ -46,24 +46,24 @@ namespace Anti_Virus_winform
 
                 if (fileToScan != null)
                 {
-                    string[] result = fs.Scan(fileToScan);
+                    string[] result = fs.Scan(fileToScan.Path);
                     string msg;
                     // Now, scan the file
                     if (result[0] == "1")
                     {
-                        msg = "A VIRUS WAS DETECTED" + " | Path: " + result[1];
+                        msg = "A VIRUS WAS DETECTED" + " | " + fileToScan.ToString();
                         AVFfiles.WriteLog(msg);
                         Console.WriteLine(msg);
                     }
                     else if (result[0] == "2") 
                     {
-                        msg = "A safe file was scanned." + " | Path: " + result[1];
+                        msg = "A safe file was scanned." + " | " + fileToScan.ToString();
                         AVFfiles.WriteLog(msg);
                         Console.WriteLine(msg);
                     }
                     else
                     {
-                        msg = "An unknown file was detected" + " | Path: " + result[1];
+                        msg = "An unknown file was detected" + " | " + fileToScan.ToString();
                         AVFfiles.WriteLog(msg);
                         Console.WriteLine(msg);
                     }
