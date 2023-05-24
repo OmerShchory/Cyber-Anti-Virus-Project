@@ -7,3 +7,6 @@
 22/05/2023 18:43:45 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\querry.json | Source: Initiated scan
 22/05/2023 18:44:13 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\‏‏מסמך טקסט חדש.txt | Source: Reactive scan Event: File created
 22/05/2023 18:44:14 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\xcvxc.txt | Source: Reactive scan Event: File renamed
+22/05/2023 20:08:32 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+22/05/2023 20:08:32 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan\good file.txt | Source: Initiated scan
+22/05/2023 20:08:32 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\Anti-Virus-winform\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan

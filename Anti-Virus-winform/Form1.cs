@@ -77,8 +77,6 @@ namespace Anti_Virus_winform
         // Event handler for initiated folder scan
         private void manualFolderScanBtn_Click(object sender, EventArgs e)
         {
-            //string folderPath = @"C:\\Users\\USER\\Desktop\\Git projects\\Cyber-Anti-Virus-Project\\Anti-Virus-winform\\bin\\Debug\\to scan\";
-
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 DialogResult result = folderDialog.ShowDialog();
@@ -86,8 +84,8 @@ namespace Anti_Virus_winform
                 {
                     string selectedFolder = folderDialog.SelectedPath;
                     Console.WriteLine(selectedFolder);
-                    // Do something with the selected folder path, such as scan it for malware.
-                    string[] files = Directory.GetFiles(selectedFolder);
+                    
+                    string[] files = Directory.GetFiles(selectedFolder, "*", SearchOption.AllDirectories);
                     foreach (string file in files)
                     {
                         engine.QueueFileForScan(new FileToScan(file,"Initiated scan"));
