@@ -1,0 +1,16 @@
+25/05/2023 16:06:45 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+25/05/2023 16:07:00 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+25/05/2023 16:07:17 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+25/05/2023 16:12:01 - Path: C:\Users\omrir\Desktop\stam\‏‏מסמך טקסט חדש.txt | Source: Reactive scan | Event: File created
+25/05/2023 16:12:02 - Path: C:\Users\omrir\Desktop\stam\דגכד.txt | Source: Reactive scan | Event: File renamed
+25/05/2023 16:12:08 - Path: C:\Users\omrir\Desktop\stam\aaaaa.txt | Source: Reactive scan | Event: File renamed
+25/05/2023 16:12:08 - Path: C:\Users\omrir\Desktop\stam\aaaaa.txt | Source: Reactive scan | Event: File renamed
+25/05/2023 16:12:08 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\aaaaa.txt | Source: Reactive scan | Event: File renamed
+25/05/2023 16:12:22 - File deleted:C:\Users\omrir\Desktop\stam\aaaaa.txt
+25/05/2023 16:16:45 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\‏‏מסמך טקסט חדש.txt | Source: Reactive scan | Event: File created
+25/05/2023 16:16:49 - Path: C:\Users\omrir\Desktop\stam\bbbbbbbbbb.txt | Source: Reactive scan | Event: File renamed
+25/05/2023 16:16:56 - File deleted:C:\Users\omrir\Desktop\stam\bbbbbbbbbb.txt
+25/05/2023 16:17:41 - An unknown file was detected | Path: C:\Users\omrir\Desktop\stam\querry.json | Source: Initiated scan
+25/05/2023 16:31:58 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+25/05/2023 16:31:58 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+25/05/2023 16:31:58 - An unknown file was detected | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
