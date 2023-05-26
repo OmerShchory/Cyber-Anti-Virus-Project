@@ -63,18 +63,29 @@ namespace O2_AV
                 }
             }
 
-            for (int i = 0; i < whiteList.Count(); i++)
+            double similarityRes = 0;
+            for (int i = 0; i < 1; i++)
             {
-                if (CompareBytes(hash, this.whiteList[i]))
+                similarityRes = similarityCheck(filename, @"C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\bad file.txt");
+                if (similarityRes*100 >= 10)
                 {
-                    // Return 2 if the file is detected as known non virus
                     res[0] = "2";
                     return res;
                 }
             }
 
+            for (int i = 0; i < this.whiteList.Count(); i++)
+            {
+                if (CompareBytes(hash, this.whiteList[i]))
+                {
+                    // Return 2 if the file is detected as known non virus
+                    res[0] = "3";
+                    return res;
+                }
+            }
+
             // Return 3 if the file is unknown
-            res[0] = "3";
+            res[0] = "4";
             return res;
         }
 
@@ -106,6 +117,26 @@ namespace O2_AV
                 //blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
             }
             return listToReturn;
+        }
+
+        public static double similarityCheck(string file1, string file2)
+        {
+            byte[] bytes1 = File.ReadAllBytes(file1);
+            byte[] bytes2 = File.ReadAllBytes(file2);
+
+            int matches = 0;
+            for (int i = 0; i < bytes1.Length - 50; i += 50)
+            {
+                byte[] subArray = new byte[50];
+                Array.Copy(bytes1, i, subArray, 0, 50);
+                if (Array.IndexOf(bytes2, subArray) != -1)
+                {
+                    matches++;
+                }
+            }
+
+            double similarity = (double)matches / (bytes1.Length / 50);
+            return similarity;
         }
     }
 }

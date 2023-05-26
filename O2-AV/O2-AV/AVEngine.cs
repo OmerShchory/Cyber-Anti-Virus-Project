@@ -12,18 +12,18 @@ namespace O2_AV
     {
         private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
-        private Form1 form1;
+        private LogHandler logHandler;
         //private TextBox _displayTextBox;
 
-        public AVEngine()
+        public AVEngine(LogHandler logHandler)
         {
             this.fs = new FileScanner();
+            this.logHandler = logHandler;
         }
 
 
-        public void Start(Form1 form1)
+        public void Start()
         {
-            this.form1 = form1;
             Thread thread = new Thread(ScannerThread);
             //_displayTextBox = Form1.DisplayTextBox;
             thread.Start();
@@ -62,23 +62,22 @@ namespace O2_AV
                     if (result[0] == "1")
                     {
                         msg = "A VIRUS WAS DETECTED" + " | " + fileToScan.ToString();
-                        AVFiles.WriteLog(msg);
-                        //Console.WriteLine(msg);
-                        form1.writeToDisplayTextBox(msg + "\n");
+                        logHandler.queueMessageToLog(msg);
                     }
                     else if (result[0] == "2")
                     {
+                        msg = "Suspected as a VIRUS due to a high similarity reat" + " | " + fileToScan.ToString();
+                        logHandler.queueMessageToLog(msg);
+                    }
+                    else if (result[0] == "3")
+                    {
                         msg = "A safe file was scanned." + " | " + fileToScan.ToString();
-                        AVFiles.WriteLog(msg);
-                        //Console.WriteLine(msg);
-                        form1.writeToDisplayTextBox(msg + "\n");
+                        logHandler.queueMessageToLog(msg);
                     }
                     else
                     {
                         msg = "An unknown file was detected" + " | " + fileToScan.ToString();
-                        AVFiles.WriteLog(msg);
-                        //Console.WriteLine(msg);
-                        form1.writeToDisplayTextBox(msg + "\n");
+                        logHandler.queueMessageToLog(msg);
                     }
                 }
             }

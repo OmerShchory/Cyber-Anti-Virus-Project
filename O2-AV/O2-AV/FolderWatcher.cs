@@ -11,45 +11,37 @@ namespace O2_AV
     internal class FolderWatcher
     {
         private AVEngine engine;
-        private Form1 form1;
-        public FolderWatcher(AVEngine engine, Form1 form1)
+        private LogHandler logHandler;
+        public FolderWatcher(AVEngine engine, LogHandler logHandler)
         {
             this.engine = engine;
-            this.form1 = form1;
+            this.logHandler = logHandler;
         }
 
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File created");
             engine.QueueFileForScan(fts);
-            //Console.WriteLine(fts.ToString());
-            AVFiles.WriteLog(fts.ToString());
-            form1.writeToDisplayTextBox(fts.ToString());
+            logHandler.queueMessageToLog(fts.ToString());
         }
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
         {
-            //Console.WriteLine($"File deleted: {e.FullPath}");
-            AVFiles.WriteLog("File deleted:" + e.FullPath);
-            form1.writeToDisplayTextBox("File deleted:" + e.FullPath);
+            logHandler.queueMessageToLog("File deleted:" + e.FullPath);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File renamed");
             engine.QueueFileForScan(fts);
-            //Console.WriteLine(fts.ToString());
-            AVFiles.WriteLog(fts.ToString());
-            form1.writeToDisplayTextBox(fts.ToString());
+            logHandler.queueMessageToLog(fts.ToString());
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File changed");
             engine.QueueFileForScan(fts);
-            //Console.WriteLine(fts.ToString());
-            AVFiles.WriteLog(fts.ToString());
-            form1.writeToDisplayTextBox(fts.ToString());
+            logHandler.queueMessageToLog(fts.ToString());
         }
 
         public void watch(string path)

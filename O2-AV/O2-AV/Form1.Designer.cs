@@ -35,6 +35,7 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.displayTextBox = new System.Windows.Forms.TextBox();
+            this.isExpertModeChckbx = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // headerLbl
@@ -107,14 +108,29 @@
             this.displayTextBox.Location = new System.Drawing.Point(507, 203);
             this.displayTextBox.Multiline = true;
             this.displayTextBox.Name = "displayTextBox";
+            this.displayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.displayTextBox.Size = new System.Drawing.Size(768, 427);
             this.displayTextBox.TabIndex = 6;
+            // 
+            // isExpertModeChckbx
+            // 
+            this.isExpertModeChckbx.AutoSize = true;
+            this.isExpertModeChckbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.isExpertModeChckbx.Location = new System.Drawing.Point(1087, 162);
+            this.isExpertModeChckbx.Name = "isExpertModeChckbx";
+            this.isExpertModeChckbx.Size = new System.Drawing.Size(188, 35);
+            this.isExpertModeChckbx.TabIndex = 7;
+            this.isExpertModeChckbx.Text = "Expert Mode";
+            this.isExpertModeChckbx.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.isExpertModeChckbx.UseVisualStyleBackColor = true;
+            this.isExpertModeChckbx.CheckedChanged += new System.EventHandler(this.isExpertModeChckbx_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1391, 673);
+            this.Controls.Add(this.isExpertModeChckbx);
             this.Controls.Add(this.displayTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clearBtn);
@@ -138,6 +154,7 @@
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox displayTextBox;
+        private System.Windows.Forms.CheckBox isExpertModeChckbx;
     }
 }
 

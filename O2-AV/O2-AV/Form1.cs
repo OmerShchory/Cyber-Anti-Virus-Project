@@ -8,23 +8,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace O2_AV
 {
     public partial class Form1 : Form
     {
         // Engine need to be in the global namespace
-        AVEngine engine = new AVEngine();
+        AVEngine engine;
+        LogHandler logHandler;
+        bool isExpertMode;
 
         public Form1()
         {
             InitializeComponent();
-            
+
+            // Initialize LogHandler
+            this.logHandler = new LogHandler(this);
+            logHandler.start();
+
             // Start the AV engine
-            engine.Start(this);
+            this.engine = new AVEngine(this.logHandler);
+            engine.Start();
 
             // Initialize FS watcher
-            FolderWatcher watcher = new FolderWatcher(engine,this);
+            FolderWatcher watcher = new FolderWatcher(engine,this.logHandler);
             watcher.watch(@"C:\Users\omrir\Desktop\stam");
         }
 
@@ -89,6 +97,11 @@ namespace O2_AV
         public void writeToDisplayTextBox(string message)
         {
             displayTextBox.Text += message + '\n'; 
+        }
+
+        private void isExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
+        {
+            this.isExpertMode = isExpertModeChckbx.Checked;
         }
     }
 }
