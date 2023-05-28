@@ -71,20 +71,38 @@ namespace O2_AV
 
         private void showLogBtn_Click(object sender, EventArgs e)
         {
-            string filePath = "./utils/log.txt";
+            //string filePath = "./utils/log.txt";
 
-            try
-            {
-                // Read the contents of the file
-                string fileContent = File.ReadAllText(filePath);
+            //try
+            //{
+            //    // Read the contents of the file
+            //    string fileContent = File.ReadAllText(filePath);
 
-                // Set the TextBox text to the file content
-                displayTextBox.Text = fileContent;
-            }
-            catch (Exception ex)
+            //    // Set the TextBox text to the file content
+            //    displayTextBox.Text = fileContent;
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Handle any exceptions that occur while reading the file
+            //    MessageBox.Show("Error reading the file: " + ex.Message);
+            //}
+
+            ConvertMalwareFilesToHex("./utils/viruses", "./utils/viruses.txt");
+        }
+
+        public void ConvertMalwareFilesToHex(string malwareFolderPath, string outputFilePath)
+        {
+            string[] malwareFiles = Directory.GetFiles(malwareFolderPath);
+
+            using (StreamWriter writer = new StreamWriter(outputFilePath))
             {
-                // Handle any exceptions that occur while reading the file
-                MessageBox.Show("Error reading the file: " + ex.Message);
+                foreach (string malwareFile in malwareFiles)
+                {
+                    byte[] bytes = File.ReadAllBytes(malwareFile);
+                    string hexString = BitConverter.ToString(bytes);
+
+                    writer.WriteLine(hexString);
+                }
             }
         }
 
