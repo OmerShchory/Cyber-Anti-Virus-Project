@@ -13,14 +13,12 @@ namespace O2_AV
         private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
         private LogHandler logHandler;
-        //private TextBox _displayTextBox;
 
         public AVEngine(LogHandler logHandler)
         {
             this.fs = new FileScanner();
             this.logHandler = logHandler;
         }
-
 
         public void Start()
         {
@@ -66,7 +64,7 @@ namespace O2_AV
                     }
                     else if (result[0] == "2")
                     {
-                        msg = "Suspected as a VIRUS due to a high similarity reat" + " | " + fileToScan.ToString();
+                        msg = "Suspected as a VIRUS due to a high similarity rate" + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
                     else if (result[0] == "3")

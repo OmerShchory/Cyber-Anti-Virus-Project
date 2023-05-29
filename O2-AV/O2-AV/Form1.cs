@@ -71,23 +71,23 @@ namespace O2_AV
 
         private void showLogBtn_Click(object sender, EventArgs e)
         {
-            //string filePath = "./utils/log.txt";
+            string filePath = "./utils/log.txt";
 
-            //try
-            //{
-            //    // Read the contents of the file
-            //    string fileContent = File.ReadAllText(filePath);
+            try
+            {
+                // Read the contents of the file
+                string fileContent = File.ReadAllText(filePath);
 
-            //    // Set the TextBox text to the file content
-            //    displayTextBox.Text = fileContent;
-            //}
-            //catch (Exception ex)
-            //{
-            //    // Handle any exceptions that occur while reading the file
-            //    MessageBox.Show("Error reading the file: " + ex.Message);
-            //}
+                // Set the TextBox text to the file content
+                displayTextBox.Text = fileContent;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur while reading the file
+                MessageBox.Show("Error reading the file: " + ex.Message);
+            }
 
-            ConvertMalwareFilesToHex("./utils/viruses", "./utils/viruses.txt");
+            //ConvertMalwareFilesToHex("./utils/viruses", "./utils/viruses.txt");
         }
 
         public void ConvertMalwareFilesToHex(string malwareFolderPath, string outputFilePath)
@@ -99,7 +99,7 @@ namespace O2_AV
                 foreach (string malwareFile in malwareFiles)
                 {
                     byte[] bytes = File.ReadAllBytes(malwareFile);
-                    string hexString = BitConverter.ToString(bytes);
+                    string hexString = BitConverter.ToString(bytes).Replace("-", "");
 
                     writer.WriteLine(hexString);
                 }
@@ -114,12 +114,24 @@ namespace O2_AV
 
         public void writeToDisplayTextBox(string message)
         {
-            displayTextBox.Text += message + '\n'; 
+            displayTextBox.Text += message + Environment.NewLine; 
         }
 
         private void isExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
         {
             this.isExpertMode = isExpertModeChckbx.Checked;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Terminate all running threads
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != this)
+                {
+                    form.Invoke(new Action(form.Close)); // Close the form, which will abort its associated thread
+                }
+            }
         }
     }
 }

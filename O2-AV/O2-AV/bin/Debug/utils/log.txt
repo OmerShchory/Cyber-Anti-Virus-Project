@@ -1,0 +1,2 @@
+29/05/2023 17:41:40 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+29/05/2023 17:48:21 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan

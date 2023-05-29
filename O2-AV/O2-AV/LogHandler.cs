@@ -10,60 +10,63 @@ namespace O2_AV
 {
     internal class LogHandler
     {
-        Queue<string> messages = new Queue<string>();
-        Form1 form1;
+        private Queue<string> messages = new Queue<string>();
+        private Form1 form1;
+        private StreamWriter writer;
+        private object writerLock = new object();
 
         public LogHandler(Form1 form1)
         {
             this.form1 = form1;
+            string logFilePath = "./utils/log.txt";
+            writer = File.AppendText(logFilePath);
         }
 
         public void start()
         {
-            Thread thread = new Thread(logWritterThread);
+            Thread thread = new Thread(logWriterThread);
             thread.Start();
         }
 
         public void queueMessageToLog(string message)
         {
-            lock(messages)
+            lock (messages)
             {
-                messages.Enqueue(message);  
+                messages.Enqueue(message);
             }
         }
 
-        public void logWritterThread() 
+        private void logWriterThread()
         {
-            string logFilePath = "./utils/log.txt";
-            // Open stream writer on the log file and run an infinite loop
-            // to ensure no other process can get access to the file
-            using (StreamWriter writer = File.AppendText(logFilePath))
+            while (true)
             {
-                while (true)
+                string message = null;
+
+                lock (messages)
                 {
-                    try
+                    if (messages.Count > 0)
                     {
-                        string message;
-                        lock (messages)
-                        {
-                            message = messages.Dequeue();
-                            if (message != null)
-                            {
-                                string logMessage = $"{DateTime.Now} - {message}";
-                                // Write to log file
-                                writer.WriteLine(logMessage);
-                                // Write to the AV text box
-                                form1.writeToDisplayTextBox(logMessage + Environment.NewLine);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Nothing in the queue
+                        message = messages.Dequeue();
                     }
                 }
+
+                if (message != null)
+                {
+                    string logMessage = $"{DateTime.Now} - {message}";
+
+                    lock (writerLock)
+                    {
+                        writer.WriteLine(logMessage);
+                        writer.Flush();
+                    }
+                    // Ensure that the UI will be updated
+                    form1.Invoke(new Action(() =>
+                    {
+                        form1.writeToDisplayTextBox(logMessage);
+                    }));
+                }
             }
-            
         }
     }
+
 }

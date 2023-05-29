@@ -15,9 +15,9 @@ def compare_files(file1, file2):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print('Usage: python similarity.py file1 file2')
+        #print('Usage: python similarity.py file1 file2')
         sys.exit(1)
     file1 = sys.argv[1]
     file2 = sys.argv[2]
     similarity = compare_files(file1, file2)
-    print(f"Similarity: {similarity * 100}%")
+    sys.exit(similarity)
