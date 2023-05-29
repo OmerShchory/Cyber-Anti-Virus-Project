@@ -19,11 +19,6 @@ namespace O2_AV
             return File.ReadAllLines("./utils/white list.txt");
         }
 
-        public static string[] readViruses()
-        {
-            return File.ReadAllLines("./utils/viruses.txt");
-        }
-
         public static void WriteLog(string message)
         {
             string logFilePath = "./utils/log.txt";

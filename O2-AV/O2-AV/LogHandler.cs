@@ -64,7 +64,7 @@ namespace O2_AV
                     // Ensure that the UI will be updated
                     form1.Invoke(new Action(() =>
                     {
-                        form1.writeToDisplayTextBox(logMessage);
+                        form1.writeToDisplayTextBox(logMessage + Environment.NewLine);
                     }));
                 }
             }

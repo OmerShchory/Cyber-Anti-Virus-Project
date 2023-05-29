@@ -13,12 +13,14 @@ namespace O2_AV
         private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
         private LogHandler logHandler;
+        //private TextBox _displayTextBox;
 
         public AVEngine(LogHandler logHandler)
         {
             this.fs = new FileScanner();
             this.logHandler = logHandler;
         }
+
 
         public void Start()
         {

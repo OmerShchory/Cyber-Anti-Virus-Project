@@ -12,14 +12,12 @@ namespace O2_AV
     {
         //private static byte[] VIRUS_FILE = { 0x36, 0x1f, 0xad, 0xf1, 0xc7, 0x12, 0xe8, 0x12, 0xd1, 0x98, 0xc4, 0xca, 0xb5, 0x71, 0x2a, 0x79 };
         List<byte[]> blackList;
-        List<byte[]> nonHashBlackList;
         List<byte[]> whiteList;
 
         public FileScanner()
         {
             this.blackList = readFromFileToList(AVFiles.readBlackList());
             this.whiteList = readFromFileToList(AVFiles.readWhiteList());
-            //this.nonHashBlackList= readFromFileToList(AVFiles.readNonHashBlackList());
         }
 
         public static byte[] ConvertHexStringToByteArray(string hexString)
@@ -68,11 +66,10 @@ namespace O2_AV
 
             string[] viruses = Directory.GetFiles("./utils/viruses");
             double similarityRes = 0;
-
             for (int i = 0; i < viruses.Count(); i++)
             {
-                similarityRes = Convert.ToDouble(RunPythonScript("./utils/similarity.py", filename, viruses[i]));
-                if (similarityRes * 100 >= 10)
+                similarityRes = Convert.ToDouble(runPythonScript("./utils/similarity.py", filename, viruses[i]));
+                if (similarityRes*100 >= 10)
                 {
                     res[0] = "2";
                     return res;
@@ -124,24 +121,26 @@ namespace O2_AV
             return listToReturn;
         }
 
-        public static string RunPythonScript(string pythonScript, string file1, string file2)
+        public static string runPythonScript(string pythonScript, string file1, string file2)
         {
+            //byte[] bytes1 = File.ReadAllBytes(file1);
+            //byte[] bytes2 = File.ReadAllBytes(file2);
 
-            //using (Process process = new Process())
+            //int matches = 0;
+            //for (int i = 0; i < bytes1.Length - 50; i += 50)
             //{
-            //    process.StartInfo.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
-            //    process.StartInfo.Arguments = $"\"{pythonScript}\" \"{file1}\" \"{file2}\"";
-            //    process.StartInfo.UseShellExecute = false;
-            //    process.StartInfo.RedirectStandardOutput = true;
-
-            //    process.Start();
-
-            //    output = process.StandardOutput.ReadToEnd();
-
-            //    process.WaitForExit();
+            //    byte[] subArray = new byte[50];
+            //    Array.Copy(bytes1, i, subArray, 0, 50);
+            //    if (Array.IndexOf(bytes2, subArray) != -1)
+            //    {
+            //        matches++;
+            //    }
             //}
 
+            //double similarity = (double)matches / (bytes1.Length / 50);
+            //return similarity;
             // 1) create process info 
+
             var psi = new ProcessStartInfo();
             psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
 
@@ -157,20 +156,18 @@ namespace O2_AV
             // 4) Execute process and get output
             var errors = "";
             var results = "";
-            using(var process = Process.Start(psi) ) 
+            using (var process = Process.Start(psi)) 
             {
                 errors = process.StandardError.ReadToEnd();
                 results = process.StandardOutput.ReadToEnd();
             }
 
-            if ( errors != null )
+            if (errors != null) 
             {
                 return results;
             }
 
             return errors;
         }
-
-
     }
 }
