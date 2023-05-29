@@ -54,6 +54,8 @@ namespace O2_AV
                 {
                     string logMessage = $"{DateTime.Now} - {message}";
 
+                    // Lock the writerLock object to ensure only one thread will
+                    // get access to the streamWriter
                     lock (writerLock)
                     {
                         writer.WriteLine(logMessage);
@@ -68,5 +70,4 @@ namespace O2_AV
             }
         }
     }
-
 }
