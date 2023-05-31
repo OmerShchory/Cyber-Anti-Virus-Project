@@ -20,4 +20,4 @@ if __name__ == '__main__':
     file1 = sys.argv[1]
     file2 = sys.argv[2]
     similarity = compare_files(file1, file2)
-    sys.exit(similarity)
+    print(similarity)

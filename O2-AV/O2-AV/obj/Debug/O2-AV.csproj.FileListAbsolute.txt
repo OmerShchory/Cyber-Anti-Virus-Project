@@ -20,3 +20,8 @@ C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\obj\Debug\O2-AV.cspro
 C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\obj\Debug\O2-AV.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\obj\Debug\O2-AV.exe
 C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\obj\Debug\O2-AV.pdb
+C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\xunit.abstractions.dll
+C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\xunit.core.dll
+C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\xunit.abstractions.xml
+C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\xunit.core.xml
+C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\obj\Debug\O2-AV.csproj.CopyComplete

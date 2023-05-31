@@ -123,24 +123,6 @@ namespace O2_AV
 
         public static string runPythonScript(string pythonScript, string file1, string file2)
         {
-            //byte[] bytes1 = File.ReadAllBytes(file1);
-            //byte[] bytes2 = File.ReadAllBytes(file2);
-
-            //int matches = 0;
-            //for (int i = 0; i < bytes1.Length - 50; i += 50)
-            //{
-            //    byte[] subArray = new byte[50];
-            //    Array.Copy(bytes1, i, subArray, 0, 50);
-            //    if (Array.IndexOf(bytes2, subArray) != -1)
-            //    {
-            //        matches++;
-            //    }
-            //}
-
-            //double similarity = (double)matches / (bytes1.Length / 50);
-            //return similarity;
-            // 1) create process info 
-
             var psi = new ProcessStartInfo();
             psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
 
