@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Management;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xunit;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace O2_AV
 {
@@ -37,7 +31,7 @@ namespace O2_AV
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(engine,this.logHandler);
-            watcher.watch(@"C:\Users\omrir\Desktop\stam");
+            watcher.watch(@"./to scan");
         }
 
         private void folderScanBtn_Click(object sender, EventArgs e)
