@@ -74,9 +74,14 @@ namespace O2_AV
                         msg = "A safe file was scanned." + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
-                    else
+                    else if (result[0] == "4")
                     {
                         msg = "An unknown file was detected" + " | " + fileToScan.ToString();
+                        logHandler.queueMessageToLog(msg);
+                    }
+                    else
+                    {
+                        msg = "An error has occurred when trying to scan the file." + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
                 }

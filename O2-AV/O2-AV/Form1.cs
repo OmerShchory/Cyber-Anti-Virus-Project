@@ -31,7 +31,18 @@ namespace O2_AV
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(engine,this.logHandler);
-            watcher.watch(@"./to scan");
+            watcher.watch(@"C:\Users\User\AppData");
+            watcher.watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
+            watcher.watch(@"C:\Program Files");
+            watcher.watch(@"C:\Program Files (x86)");
+            watcher.watch(@"C:\Users\User\Desktop");
+            watcher.watch(@"C:\Users\User\Downloads");
+            watcher.watch(@"C:\Users\User\Documents");
+            watcher.watch(@"C:\Users\User\Pictures");
+            watcher.watch(@"C:\Users\User\Music");
+            watcher.watch(@"C:\Users\User\Videos");
+            watcher.watch(@"C:\Windows");
+
         }
 
         private void folderScanBtn_Click(object sender, EventArgs e)

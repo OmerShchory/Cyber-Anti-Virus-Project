@@ -1,3 +1,62 @@
 29/05/2023 19:15:09 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
 29/05/2023 19:16:33 - A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
 31/05/2023 18:39:55 - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses2\mw-1.2-scenario1-static-signature.exe | Source: Initiated scan
+6/7/2023 9:12:26 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 4:43:58 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 4:43:58 AM - Path: ./to scan\bad file.txt | Source: Reactive scan | Event: File changed
+6/9/2023 4:43:58 AM - Path: ./to scan\good file.txt | Source: Reactive scan | Event: File changed
+6/9/2023 4:46:46 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 4:51:52 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 5:47:14 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 5:53:31 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:03:49 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:05:39 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:36:52 AM - Path: C:\Windows\SysWOW64\dllhost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:36:52 AM - Path: C:\Windows\SysWOW64\dllhost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:36:58 AM - An unknown file was detected | Path: C:\Windows\SysWOW64\dllhost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:37:03 AM - An unknown file was detected | Path: C:\Windows\SysWOW64\dllhost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:37:05 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 6:38:06 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:38:09 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 6:38:12 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+6/9/2023 6:45:20 AM - Path: C:\Windows\System32\appidcertstorecheck.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:45:20 AM - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\appidcertstorecheck.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:45:35 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:45:43 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 6:45:47 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+6/9/2023 6:47:36 AM - Path: C:\Windows\System32\sppsvc.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:47:36 AM - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\sppsvc.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:48:01 AM - Path: C:\Windows\System32\SearchProtocolHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:02 AM - Path: C:\Windows\System32\backgroundTaskHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:02 AM - Path: C:\Windows\SysWOW64\backgroundTaskHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:05 AM - Path: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\WebViewHost\WebViewHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:08 AM - An unknown file was detected | Path: C:\Windows\System32\backgroundTaskHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:13 AM - An unknown file was detected | Path: C:\Windows\SysWOW64\backgroundTaskHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:50:17 AM - An unknown file was detected | Path: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\WebViewHost\WebViewHost.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:56:43 AM - An unknown file was detected | Path: C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:57:03 AM - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\RuntimeBroker.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:57:18 AM - An unknown file was detected | Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:57:25 AM - An unknown file was detected | Path: C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe | Source: Reactive scan | Event: File changed
+6/9/2023 6:58:07 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 6:58:11 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 6:58:15 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+6/9/2023 7:02:26 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 7:02:32 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 7:02:34 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+6/9/2023 7:05:28 AM - A VIRUS WAS DETECTED | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan
+6/9/2023 7:05:32 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\good file.txt | Source: Initiated scan
+6/9/2023 7:05:33 AM - An unknown file was detected | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\inner folder\another file.txt | Source: Initiated scan
+6/9/2023 7:05:33 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-1.1-scenario1-static-signature.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:33 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-1.2-scenario1-static-signature.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:34 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-1.3-scenario1-static-signature.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:35 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-2.1-scenario2-autostart.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:38 AM - An unknown file was detected | Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:39 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-3.1-scenario3-suspicious.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:41 AM - Suspected as a VIRUS due to a high similarity rate | Path: C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-4.1-scenario4-network.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:47 AM - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\appidpolicyconverter.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:56 AM - An unknown file was detected | Path: C:\Windows\System32\pcaui.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:57 AM - An unknown file was detected | Path: C:\Windows\SysWOW64\pcaui.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:57 AM - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\Sgrm\SgrmBroker.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:05:59 AM - An unknown file was detected | Path: C:\Program Files\Microsoft Update Health Tools\uhssvc.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:06:06 AM - An unknown file was detected | Path: C:\Windows\UUS\amd64\MoUsoCoreWorker.exe | Source: Reactive scan | Event: File changed
+6/9/2023 7:06:26 AM - An unknown file was detected | Path: C:\Windows\System32\fsquirt.exe | Source: Reactive scan | Event: File changed

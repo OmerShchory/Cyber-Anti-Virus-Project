@@ -22,7 +22,7 @@ namespace O2_AV
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File created");
             engine.QueueFileForScan(fts);
-            logHandler.queueMessageToLog(fts.ToString());
+            //logHandler.queueMessageToLog(fts.ToString());
         }
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
@@ -34,14 +34,14 @@ namespace O2_AV
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File renamed");
             engine.QueueFileForScan(fts);
-            logHandler.queueMessageToLog(fts.ToString());
+           // logHandler.queueMessageToLog(fts.ToString());
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
             FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File changed");
             engine.QueueFileForScan(fts);
-            logHandler.queueMessageToLog(fts.ToString());
+            //logHandler.queueMessageToLog(fts.ToString());
         }
 
         public void watch(string path)
@@ -61,7 +61,7 @@ namespace O2_AV
             _watcher.Deleted += OnDeleted;
             _watcher.Renamed += OnRenamed;
             _watcher.Changed += OnChanged;
-            _watcher.Filter = "*.txt";
+            _watcher.Filter = "*.exe";
             _watcher.IncludeSubdirectories = true;
             _watcher.EnableRaisingEvents = true;
         }
