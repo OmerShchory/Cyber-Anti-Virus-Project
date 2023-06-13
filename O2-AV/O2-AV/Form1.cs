@@ -15,6 +15,7 @@ namespace O2_AV
         // Engine need to be in the global namespace
         AVEngine engine;
         LogHandler logHandler;
+        PortScanner portScanner;
         bool isExpertMode;
 
         public Form1()
@@ -29,8 +30,12 @@ namespace O2_AV
             this.engine = new AVEngine(this.logHandler);
             engine.Start();
 
+            this.portScanner = new PortScanner(this.engine);
+            this.portScanner.Start();
+
+
             // Initialize FS watcher
-            FolderWatcher watcher = new FolderWatcher(engine,this.logHandler);
+            FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
             watcher.watch(@"C:\Users\User\AppData");
             watcher.watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
             watcher.watch(@"C:\Program Files");
@@ -38,10 +43,10 @@ namespace O2_AV
             watcher.watch(@"C:\Users\User\Desktop");
             watcher.watch(@"C:\Users\User\Downloads");
             watcher.watch(@"C:\Users\User\Documents");
+            watcher.watch(@"C:\Windows");
             watcher.watch(@"C:\Users\User\Pictures");
             watcher.watch(@"C:\Users\User\Music");
             watcher.watch(@"C:\Users\User\Videos");
-            watcher.watch(@"C:\Windows");
 
         }
 
