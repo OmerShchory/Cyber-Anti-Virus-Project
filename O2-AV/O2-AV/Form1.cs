@@ -24,7 +24,7 @@ namespace O2_AV
 
             // Initialize LogHandler
             this.logHandler = new LogHandler(this);
-            logHandler.start();
+            logHandler.Start();
 
             // Start the AV engine
             this.engine = new AVEngine(this.logHandler);
@@ -36,21 +36,22 @@ namespace O2_AV
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
-            watcher.watch(@"C:\Users\User\AppData");
-            watcher.watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
-            watcher.watch(@"C:\Program Files");
-            watcher.watch(@"C:\Program Files (x86)");
-            watcher.watch(@"C:\Users\User\Desktop");
-            watcher.watch(@"C:\Users\User\Downloads");
-            watcher.watch(@"C:\Users\User\Documents");
-            watcher.watch(@"C:\Windows");
-            watcher.watch(@"C:\Users\User\Pictures");
-            watcher.watch(@"C:\Users\User\Music");
-            watcher.watch(@"C:\Users\User\Videos");
+            //watcher.Watch(@"C:\Users\User\AppData");
+            //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
+            //watcher.Watch(@"C:\Program Files");
+            //watcher.Watch(@"C:\Program Files (x86)");
+            //watcher.Watch(@"C:\Users\User\Desktop");
+            //watcher.Watch(@"C:\Users\User\Downloads");
+            //watcher.Watch(@"C:\Users\User\Documents");
+            //watcher.Watch(@"C:\Windows");
+            //watcher.Watch(@"C:\Users\User\Pictures");
+            //watcher.Watch(@"C:\Users\User\Music");
+            //watcher.Watch(@"C:\Users\User\Videos");
 
+            logHandler.QueueMessageToLog("O2-Anti-Virus has launched and started! Hurray!");
         }
 
-        private void folderScanBtn_Click(object sender, EventArgs e)
+        private void FolderScanBtn_Click(object sender, EventArgs e)
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
@@ -67,7 +68,7 @@ namespace O2_AV
             }
         }
 
-        private void fileScanBtn_Click(object sender, EventArgs e)
+        private void FileScanBtn_Click(object sender, EventArgs e)
         {
             using (var openFileDialog = new OpenFileDialog())
             {
@@ -83,25 +84,23 @@ namespace O2_AV
             }
         }
 
-        private void showLogBtn_Click(object sender, EventArgs e)
+        private void ShowLogBtn_Click(object sender, EventArgs e)
         {
-            //string filePath = "./utils/log.txt";
+            // Specify the path of the text file you want to open
+            string filePath = @"./utils/log.txt";
 
-            //try
-            //{
-            //    // Read the contents of the file
-            //    string fileContent = File.ReadAllText(filePath);
+            try
+            {
+                // Launch Notepad and open the file
+                Process.Start("notepad.exe", filePath);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur
+                string msg = $"Error: {ex.Message}";
+                logHandler.QueueMessageToLog(msg);
+            }
 
-            //    // Set the TextBox text to the file content
-            //    displayTextBox.Text = fileContent;
-            //}
-            //catch (Exception ex)
-            //{
-            //    // Handle any exceptions that occur while reading the file
-            //    MessageBox.Show("Error reading the file: " + ex.Message);
-            //}
-
-            GetNetStatPorts();
         }
 
         public void ConvertMalwareFilesToHex(string malwareFolderPath, string outputFilePath)
@@ -120,163 +119,41 @@ namespace O2_AV
             }
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void ClearBtn_Click(object sender, EventArgs e)
         {
             // Clear the TextBox
             displayTextBox.Text = string.Empty;
         }
 
-        public void writeToDisplayTextBox(string message)
+        public void WriteToDisplayTextBox(string message)
         {
             displayTextBox.Text += message + '\n'; 
         }
 
-        private void isExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
+        private void IsExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
         {
             this.isExpertMode = isExpertModeChckbx.Checked;
         }
 
-        public void GetNetStatPorts()
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //var Ports = new List<NetstatPort>();
-
-            Process p = null;
-
-            try
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                using (p = new Process())
+                // The user is trying to close the form, handle the event here
+
+                // You can display a confirmation dialog to confirm the shutdown
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
                 {
-                    ProcessStartInfo ps = new ProcessStartInfo();
-                    ps.Arguments = "-a -n -o";
-                    ps.FileName = "netstat.exe";
-                    ps.UseShellExecute = false;
-                    ps.CreateNoWindow = true;
-                    ps.WindowStyle = ProcessWindowStyle.Hidden;
-                    ps.RedirectStandardInput = true;
-                    ps.RedirectStandardOutput = true;
-                    ps.RedirectStandardError = true;
-                    p.StartInfo = ps;
-                    p.Start();
-                    StreamReader stdOutput = p.StandardOutput;
-                    StreamReader stdError = p.StandardError;
-                    string content = stdOutput.ReadToEnd() + stdError.ReadToEnd();
-                    string exitStatus = p.ExitCode.ToString();
-                    if (exitStatus != "0")
-                    {
-                        // Command Errored. Handle Here If Need Be
-                    }
-
-                    //Get The Rows
-                    string[] rows = Regex.Split(content, "\r\n");
-                    foreach (string row in rows)
-                    {
-                        //Split it baby
-                        string[] tokens = Regex.Split(row, "\\s+");
-                        if (tokens.Length > 4 && (tokens[1].Equals("UDP") || tokens[1].Equals("TCP")))
-                        {
-                            string localAddress = Regex.Replace(tokens[2], @"\[(.*?)\]", "1.1.1.1");
-
-                            string protocol = localAddress.Contains("1.1.1.1") ? String.Format("{0}v6", tokens[1]) : String.Format("{0}v4", tokens[1]);
-                            string openPort = localAddress.Split(':')[1];
-
-                            int pid = tokens[1] == "UDP" ? Convert.ToInt16(tokens[4]) : Convert.ToInt16(tokens[5]);
-                            string state = tokens[4];
-
-                            string processPath = GetProcessExecutablePath(pid);
-
-                            if (processPath != null && !(int.TryParse(state, out _)))
-                            {
-                                // high CPU usage
-                                string processName = GetProcessName(pid);
-                                //
-                               
-                                // Need to push the path to the engine
-                                Console.WriteLine(protocol,
-                                        localAddress,
-                                        openPort,
-                                        state,
-                                        pid,
-                                        processName,
-                                        processPath);
-                            }
-
-                        }
-                    }
-                    // p.Kill();
+                    // Cancel the form closing event
+                    e.Cancel = true;
                 }
-
-            }
-            catch (Exception ex)
-            {
-
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
-                throw;
-
-            }
-
-            //return Ports;
-        }
-
-        public static string GetProcessName(int pid)
-        {
-
-            string processName;
-
-            try
-            {
-                processName = Process.GetProcessById(pid).ProcessName;
-            }
-            catch (Exception e)
-            {
-                processName = "-";
-            }
-            return processName;
-        }
-        private string GetProcessExecutablePath(int processId)
-        {
-            try
-            {
-                string wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = " + processId;
-                using (var searcher = new ManagementObjectSearcher(wmiQueryString))
+                else
                 {
-                    using (var results = searcher.Get())
-                    {
-                        ManagementObject mo = results.Cast<ManagementObject>().FirstOrDefault();
-                        if (mo != null)
-                        {
-                            return (string)mo["ExecutablePath"];
-                        }
-                    }
+                    logHandler.QueueMessageToLog("This anti virus program has been shut down.");
+
                 }
-            }
-            catch (Win32Exception ex)
-            {
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
-                throw;
-            }
-            catch (Exception ex)
-            {
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
-                throw;
-            }
-            return null;
-        }
-
-        private void Form1_Closing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult res = MessageBox.Show("Are you sure you want to exit?", "Antivirus", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            if (res == DialogResult.OK)
-            {
-
-                Environment.Exit(Environment.ExitCode);
-            }
-            if (res == DialogResult.Cancel)
-            {
-                e.Cancel = true;
-                return;
             }
         }
     }

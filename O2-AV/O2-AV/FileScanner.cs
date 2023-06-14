@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace O2_AV
 {
@@ -16,8 +15,8 @@ namespace O2_AV
 
         public FileScanner()
         {
-            this.blackList = readFromFileToList(AVFiles.readBlackList());
-            this.whiteList = readFromFileToList(AVFiles.readWhiteList());
+            this.blackList = ReadFromFileToList(AVFiles.ReadBlackList());
+            this.whiteList = ReadFromFileToList(AVFiles.ReadWhiteList());
         }
 
         public static byte[] ConvertHexStringToByteArray(string hexString)
@@ -33,14 +32,6 @@ namespace O2_AV
             return byteArray;
         }
 
-        //private static string[] lines = readBlackList();
-
-        /// <summary>
-        /// Returns true if the file is a virus
-        /// 
-        /// </summary>
-        /// <param name="filename">File to scan</param>
-        /// <returns></returns>
         public string[] Scan(string filename)
         {
             string[] res = { "", filename };
@@ -71,7 +62,7 @@ namespace O2_AV
                 double similarityRes = 0;
                 for (int i = 0; i < viruses.Count(); i++)
                 {
-                    similarityRes = Convert.ToDouble(runPythonScript("./utils/similarity.py", filename, viruses[i]));
+                    similarityRes = Convert.ToDouble(RunPythonScript("./utils/similarity.py", filename, viruses[i]));
                     if (similarityRes * 100 >= 60)
                     {
                         res[0] = "2";
@@ -121,7 +112,7 @@ namespace O2_AV
         }
 
         // Read the Black List from file and store it for comparisons
-        private static List<byte[]> readFromFileToList(string[] byteArrayFromFile)
+        private static List<byte[]> ReadFromFileToList(string[] byteArrayFromFile)
         {
             List<byte[]> listToReturn = new List<byte[]>();
             for (int i = 0; i < byteArrayFromFile.Length; i++)
@@ -132,7 +123,7 @@ namespace O2_AV
             return listToReturn;
         }
 
-        public static string runPythonScript(string pythonScript, string file1, string file2)
+        public static string RunPythonScript(string pythonScript, string file1, string file2)
         {
             var psi = new ProcessStartInfo();
        

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace O2_AV
 {
@@ -22,13 +20,13 @@ namespace O2_AV
             writer = File.AppendText(logFilePath);
         }
 
-        public void start()
+        public void Start()
         {
-            Thread thread = new Thread(logWriterThread);
+            Thread thread = new Thread(LogWriterThread);
             thread.Start();
         }
 
-        public void queueMessageToLog(string message)
+        public void QueueMessageToLog(string message)
         {
             lock (messages)
             {
@@ -36,7 +34,7 @@ namespace O2_AV
             }
         }
 
-        private void logWriterThread()
+        private void LogWriterThread()
         {
             while (true)
             {
@@ -64,7 +62,7 @@ namespace O2_AV
                     // Ensure that the UI will be updated
                     form1.Invoke(new Action(() =>
                     {
-                        form1.writeToDisplayTextBox(logMessage + Environment.NewLine);
+                        form1.WriteToDisplayTextBox(logMessage + Environment.NewLine);
                     }));
                 }
             }

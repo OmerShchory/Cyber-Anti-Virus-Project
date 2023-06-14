@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace O2_AV
 {
     internal class AVFiles
     {
-        public static string[] readBlackList()
+        public static string[] ReadBlackList()
         {
             return File.ReadAllLines("./utils/black list.txt");
         }
 
-        public static string[] readWhiteList()
+        public static string[] ReadWhiteList()
         {
             return File.ReadAllLines("./utils/white list.txt");
         }

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace O2_AV
 {
@@ -13,7 +9,6 @@ namespace O2_AV
         private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
         private LogHandler logHandler;
-        //private TextBox _displayTextBox;
 
         public AVEngine(LogHandler logHandler)
         {
@@ -62,27 +57,27 @@ namespace O2_AV
                     if (result[0] == "1")
                     {
                         msg = "ALERT! A VIRUS WAS DETECTED" + " | " + fileToScan.ToString();
-                        logHandler.queueMessageToLog(msg);
+                        logHandler.QueueMessageToLog(msg);
                     }
                     else if (result[0] == "2")
                     {
                         msg = "ALERT! Suspected as a VIRUS due to a high similarity rate" + " | " + fileToScan.ToString();
-                        logHandler.queueMessageToLog(msg);
+                        logHandler.QueueMessageToLog(msg);
                     }
                     else if (result[0] == "3")
                     {
                         msg = "A safe file was scanned." + " | " + fileToScan.ToString();
-                        logHandler.queueMessageToLog(msg);
+                        logHandler.QueueMessageToLog(msg);
                     }
                     else if (result[0] == "4")
                     {
                         msg = "ALERT! An unknown file was detected" + " | " + fileToScan.ToString();
-                        logHandler.queueMessageToLog(msg);
+                        logHandler.QueueMessageToLog(msg);
                     }
                     else
                     {
                         msg = "An error has occurred when trying to scan the file." + " | " + fileToScan.ToString();
-                        logHandler.queueMessageToLog(msg);
+                        logHandler.QueueMessageToLog(msg);
                     }
                 }
             }
