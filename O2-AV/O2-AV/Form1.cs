@@ -16,6 +16,7 @@ namespace O2_AV
         AVEngine engine;
         LogHandler logHandler;
         PortScanner portScanner;
+        ProcessScanner processScanner;
         bool isExpertMode;
 
         public Form1()
@@ -30,23 +31,27 @@ namespace O2_AV
             this.engine = new AVEngine(this.logHandler);
             engine.Start();
 
+            // Start Port Scanner
             this.portScanner = new PortScanner(this.engine);
             this.portScanner.Start();
 
+            // Start Process Scanner
+            this.processScanner = new ProcessScanner(this.engine);
+            this.processScanner.Start();
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
-            //watcher.Watch(@"C:\Users\User\AppData");
-            //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
-            //watcher.Watch(@"C:\Program Files");
-            //watcher.Watch(@"C:\Program Files (x86)");
-            //watcher.Watch(@"C:\Users\User\Desktop");
-            //watcher.Watch(@"C:\Users\User\Downloads");
-            //watcher.Watch(@"C:\Users\User\Documents");
-            //watcher.Watch(@"C:\Windows");
-            //watcher.Watch(@"C:\Users\User\Pictures");
-            //watcher.Watch(@"C:\Users\User\Music");
-            //watcher.Watch(@"C:\Users\User\Videos");
+            watcher.Watch(@"C:\Users\User\AppData");
+            watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
+            watcher.Watch(@"C:\Program Files");
+            watcher.Watch(@"C:\Program Files (x86)");
+            watcher.Watch(@"C:\Users\User\Desktop");
+            watcher.Watch(@"C:\Users\User\Downloads");
+            watcher.Watch(@"C:\Users\User\Documents");
+            watcher.Watch(@"C:\Windows");
+            watcher.Watch(@"C:\Users\User\Pictures");
+            watcher.Watch(@"C:\Users\User\Music");
+            watcher.Watch(@"C:\Users\User\Videos");
 
             logHandler.QueueMessageToLog("O2-Anti-Virus has launched and started! Hurray!");
         }
@@ -60,10 +65,12 @@ namespace O2_AV
                 {
                     string selectedFolder = folderDialog.SelectedPath;
                     string[] files = Directory.GetFiles(selectedFolder, "*", SearchOption.AllDirectories);
+                    this.logHandler.QueueMessageToLog("Directory initiated scan - started!");
                     foreach (string file in files)
                     {
                         engine.QueueFileForScan(new FileToScan(file, "Initiated scan"));
                     }
+                    this.logHandler.QueueMessageToLog("Directory initiated scan - finished!");
                 }
             }
         }
@@ -78,6 +85,7 @@ namespace O2_AV
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    this.logHandler.QueueMessageToLog("File initiated scan - started!");
                     string filePath = openFileDialog.FileName;
                     engine.QueueFileForScan(new FileToScan(filePath, "Initiated scan"));
                 }
@@ -91,6 +99,7 @@ namespace O2_AV
 
             try
             {
+                this.logHandler.QueueMessageToLog("User - Log file displayed");
                 // Launch Notepad and open the file
                 Process.Start("notepad.exe", filePath);
             }
@@ -121,6 +130,7 @@ namespace O2_AV
 
         private void ClearBtn_Click(object sender, EventArgs e)
         {
+            this.logHandler.QueueMessageToLog("User - notification cleared!");
             // Clear the TextBox
             displayTextBox.Text = string.Empty;
         }
@@ -133,6 +143,16 @@ namespace O2_AV
         private void IsExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
         {
             this.isExpertMode = isExpertModeChckbx.Checked;
+            if (this.isExpertMode)
+            {
+                this.logHandler.QueueMessageToLog("Expert mode - started!");
+            }
+            else
+            {
+                this.logHandler.QueueMessageToLog("Expert mode - ended!");
+            }
+            // Toggle IsExpertMode in AVEngine
+            this.engine.ToggleExpertMode();
         }
 
 

@@ -67,6 +67,7 @@
     <Compile Include="LogHandler.cs" />
     <Compile Include="PortScanner.cs" />
     <Compile Include="PortToScan.cs" />
+    <Compile Include="ProcessScanner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

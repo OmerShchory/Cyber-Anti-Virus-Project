@@ -1,0 +1,39 @@
+14/06/2023 20:28:08 - O2-Anti-Virus has launched and started! Hurray!
+14/06/2023 20:28:10 - An error has occurred when trying to scan the file. | Path: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\WebViewHost\WebViewHost.exe | Source: Reactive Process Scan | Process Name: WebViewHost.exe | PID: 30436
+14/06/2023 20:28:11 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: svchost.exe | PID: 30512
+14/06/2023 20:28:12 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.43\msedgewebview2.exe | Source: Reactive Process Scan | Process Name: msedgewebview2.exe | PID: 21156
+14/06/2023 20:28:12 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.43\msedgewebview2.exe | Source: Reactive Process Scan | Process Name: msedgewebview2.exe | PID: 25904
+14/06/2023 20:28:14 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: taskhostw.exe | PID: 31172
+14/06/2023 20:28:16 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: sppsvc.exe | PID: 31364
+14/06/2023 20:28:24 - An error has occurred when trying to scan the file. | Path: C:\Windows\System32\smartscreen.exe | Source: Reactive Process Scan | Process Name: smartscreen.exe | PID: 29564
+14/06/2023 20:28:26 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 15712
+14/06/2023 20:28:26 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 17416
+14/06/2023 20:28:27 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 22412
+14/06/2023 20:28:27 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 3068
+14/06/2023 20:28:28 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 17120
+14/06/2023 20:28:28 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 17604
+14/06/2023 20:28:29 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 31236
+14/06/2023 20:28:29 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 31444
+14/06/2023 20:28:31 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 31676
+14/06/2023 20:28:49 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 19232
+14/06/2023 20:28:49 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 19560
+14/06/2023 20:28:49 - An error has occurred when trying to scan the file. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 20276
+14/06/2023 20:28:50 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\114.0.1823.43\identity_helper.exe | Source: Reactive Process Scan | Process Name: identity_helper.exe | PID: 24816
+14/06/2023 20:28:50 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 31476
+14/06/2023 20:28:51 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 29080
+14/06/2023 20:28:51 - An error has occurred when trying to scan the file. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 29340
+14/06/2023 20:29:01 - This anti virus program has been shut down.
+14/06/2023 20:44:29 - O2-Anti-Virus has launched and started! Hurray!
+14/06/2023 20:44:34 - Expert mode - started!
+14/06/2023 20:44:35 - Expert mode - ended!
+14/06/2023 20:44:36 - Expert mode - started!
+14/06/2023 20:44:36 - Expert mode - ended!
+14/06/2023 20:44:36 - Expert mode - started!
+14/06/2023 20:44:36 - Expert mode - ended!
+14/06/2023 20:44:37 - Expert mode - started!
+14/06/2023 20:44:37 - Expert mode - ended!
+14/06/2023 20:44:37 - Expert mode - started!
+14/06/2023 20:44:37 - Expert mode - ended!
+14/06/2023 20:44:45 - User - Log file displayed
+14/06/2023 20:45:04 - File initiated scan - started!
+14/06/2023 20:45:04 - ALERT! A VIRUS WAS DETECTED | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\to scan\bad file.txt | Source: Initiated scan

@@ -9,13 +9,19 @@ namespace O2_AV
         private Queue<FileToScan> FilesToScan = new Queue<FileToScan>();
         public FileScanner fs;
         private LogHandler logHandler;
+        bool isExpertMode;
 
         public AVEngine(LogHandler logHandler)
         {
             this.fs = new FileScanner();
             this.logHandler = logHandler;
+            this.isExpertMode = false;
         }
 
+        public void ToggleExpertMode()
+        {
+            this.isExpertMode = !this.isExpertMode;
+        }
 
         public void Start()
         {
@@ -28,7 +34,14 @@ namespace O2_AV
         {
             lock (FilesToScan)
             {
-                FilesToScan.Enqueue(file);
+                // Check if the file already exists in the queue
+                bool exists = FilesToScan.Contains(file);
+
+                // If the file doesn't exist, enqueue it
+                if (!exists)
+                {
+                    FilesToScan.Enqueue(file);
+                }
             }
         }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FormClosing += Form1_FormClosing;
             this.headerLbl = new System.Windows.Forms.Label();
             this.folderScanBtn = new System.Windows.Forms.Button();
             this.fileScanBtn = new System.Windows.Forms.Button();
@@ -43,9 +42,9 @@
             // 
             this.headerLbl.AutoSize = true;
             this.headerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.headerLbl.Location = new System.Drawing.Point(507, 58);
+            this.headerLbl.Location = new System.Drawing.Point(451, 46);
             this.headerLbl.Name = "headerLbl";
-            this.headerLbl.Size = new System.Drawing.Size(517, 91);
+            this.headerLbl.Size = new System.Drawing.Size(437, 76);
             this.headerLbl.TabIndex = 0;
             this.headerLbl.Text = "O2 Anti Virus";
             this.headerLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -53,9 +52,10 @@
             // folderScanBtn
             // 
             this.folderScanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.folderScanBtn.Location = new System.Drawing.Point(108, 197);
+            this.folderScanBtn.Location = new System.Drawing.Point(32, 158);
+            this.folderScanBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.folderScanBtn.Name = "folderScanBtn";
-            this.folderScanBtn.Size = new System.Drawing.Size(320, 123);
+            this.folderScanBtn.Size = new System.Drawing.Size(284, 98);
             this.folderScanBtn.TabIndex = 1;
             this.folderScanBtn.Text = "Scan a folder";
             this.folderScanBtn.UseVisualStyleBackColor = true;
@@ -64,9 +64,10 @@
             // fileScanBtn
             // 
             this.fileScanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.fileScanBtn.Location = new System.Drawing.Point(108, 351);
+            this.fileScanBtn.Location = new System.Drawing.Point(32, 274);
+            this.fileScanBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fileScanBtn.Name = "fileScanBtn";
-            this.fileScanBtn.Size = new System.Drawing.Size(320, 123);
+            this.fileScanBtn.Size = new System.Drawing.Size(284, 98);
             this.fileScanBtn.TabIndex = 2;
             this.fileScanBtn.Text = "Scan a file";
             this.fileScanBtn.UseVisualStyleBackColor = true;
@@ -75,9 +76,10 @@
             // showLogBtn
             // 
             this.showLogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.showLogBtn.Location = new System.Drawing.Point(108, 505);
+            this.showLogBtn.Location = new System.Drawing.Point(32, 391);
+            this.showLogBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showLogBtn.Name = "showLogBtn";
-            this.showLogBtn.Size = new System.Drawing.Size(320, 123);
+            this.showLogBtn.Size = new System.Drawing.Size(284, 98);
             this.showLogBtn.TabIndex = 3;
             this.showLogBtn.Text = "Show log";
             this.showLogBtn.UseVisualStyleBackColor = true;
@@ -86,9 +88,10 @@
             // clearBtn
             // 
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.clearBtn.Location = new System.Drawing.Point(108, 657);
+            this.clearBtn.Location = new System.Drawing.Point(32, 512);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(320, 123);
+            this.clearBtn.Size = new System.Drawing.Size(284, 98);
             this.clearBtn.TabIndex = 4;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
@@ -98,28 +101,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(564, 197);
+            this.label1.Location = new System.Drawing.Point(340, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 37);
+            this.label1.Size = new System.Drawing.Size(172, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "Notifications:";
             // 
             // displayTextBox
             // 
-            this.displayTextBox.Location = new System.Drawing.Point(570, 254);
+            this.displayTextBox.Location = new System.Drawing.Point(346, 203);
+            this.displayTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.displayTextBox.Multiline = true;
             this.displayTextBox.Name = "displayTextBox";
             this.displayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.displayTextBox.Size = new System.Drawing.Size(1339, 533);
+            this.displayTextBox.Size = new System.Drawing.Size(1191, 407);
             this.displayTextBox.TabIndex = 6;
             // 
             // isExpertModeChckbx
             // 
             this.isExpertModeChckbx.AutoSize = true;
             this.isExpertModeChckbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.isExpertModeChckbx.Location = new System.Drawing.Point(1680, 191);
+            this.isExpertModeChckbx.Location = new System.Drawing.Point(1349, 154);
+            this.isExpertModeChckbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isExpertModeChckbx.Name = "isExpertModeChckbx";
-            this.isExpertModeChckbx.Size = new System.Drawing.Size(222, 41);
+            this.isExpertModeChckbx.Size = new System.Drawing.Size(188, 35);
             this.isExpertModeChckbx.TabIndex = 7;
             this.isExpertModeChckbx.Text = "Expert Mode";
             this.isExpertModeChckbx.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -128,9 +133,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 842);
+            this.ClientSize = new System.Drawing.Size(1603, 674);
             this.Controls.Add(this.isExpertModeChckbx);
             this.Controls.Add(this.displayTextBox);
             this.Controls.Add(this.label1);
@@ -139,8 +144,9 @@
             this.Controls.Add(this.fileScanBtn);
             this.Controls.Add(this.folderScanBtn);
             this.Controls.Add(this.headerLbl);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Form1";            
             this.ResumeLayout(false);
             this.PerformLayout();
 
