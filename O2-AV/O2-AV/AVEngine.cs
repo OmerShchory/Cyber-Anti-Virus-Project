@@ -61,12 +61,12 @@ namespace O2_AV
                     // Now, scan the file
                     if (result[0] == "1")
                     {
-                        msg = "A VIRUS WAS DETECTED" + " | " + fileToScan.ToString();
+                        msg = "ALERT! A VIRUS WAS DETECTED" + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
                     else if (result[0] == "2")
                     {
-                        msg = "Suspected as a VIRUS due to a high similarity rate" + " | " + fileToScan.ToString();
+                        msg = "ALERT! Suspected as a VIRUS due to a high similarity rate" + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
                     else if (result[0] == "3")
@@ -76,7 +76,7 @@ namespace O2_AV
                     }
                     else if (result[0] == "4")
                     {
-                        msg = "An unknown file was detected" + " | " + fileToScan.ToString();
+                        msg = "ALERT! An unknown file was detected" + " | " + fileToScan.ToString();
                         logHandler.queueMessageToLog(msg);
                     }
                     else
