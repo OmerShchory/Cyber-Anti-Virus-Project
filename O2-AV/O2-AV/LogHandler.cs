@@ -26,11 +26,11 @@ namespace O2_AV
             thread.Start();
         }
 
-        public void QueueMessageToLog(string message)
+        public void QueueMessageToLog(string notifications_msg)
         {
             lock (messages)
             {
-                messages.Enqueue(message);
+                messages.Enqueue(notifications_msg);
             }
         }
 
