@@ -26,7 +26,6 @@ namespace O2_AV
         public void Start()
         {
             Thread thread = new Thread(ScannerThread);
-            //_displayTextBox = Form1.DisplayTextBox;
             thread.Start();
         }
 

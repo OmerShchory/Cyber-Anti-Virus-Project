@@ -23,7 +23,7 @@ namespace O2_AV
                    Path == scan.Path;
         }
 
-        // Generated the GetHashCode function to avoid compiler warrning 
+        // Generated the GetHashCode function to avoid compiler warning 
         public override int GetHashCode()
         {
             return 467214278 + EqualityComparer<string>.Default.GetHashCode(Path);
