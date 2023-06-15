@@ -158,3 +158,149 @@
 15/06/2023 12:44:34 - An error has occurred when trying to scan the file. | "C:\Users\user1\AppData\Local\WebEx\WebexHost.exe" /daemon /runFrom=autorun
 15/06/2023 12:44:34 - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Epic Pen\EpicPen.exe -startup
 15/06/2023 12:44:34 - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:31:29 AM - O2-Anti-Virus has launched and started! Hurray!
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:35 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:31:42 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:31:42 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PerfWatson2.exe
+6/15/2023 3:31:43 AM - An error has occurred when trying to scan the file. | C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.11600.0.0_x64__cw5n1h2txyewy\Dashboard\Widgets.exe
+6/15/2023 3:31:44 AM - An error has occurred when trying to scan the file. | C:\Windows\Explorer.EXE
+6/15/2023 3:31:45 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:31:45 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.Dotnet.x64\ServiceHub.DataWarehouseHost.exe
+6/15/2023 3:31:47 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:31:47 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:31:47 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:31:51 AM - User - Log file displayed
+6/15/2023 3:31:56 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:57 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:57 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:31:57 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:57 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:31:58 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:31:59 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:32:00 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:32:00 AM - An error has occurred when trying to scan the file. | C:\Program Files\WindowsApps\Microsoft.WindowsNotepad_11.2304.26.0_x64__8wekyb3d8bbwe\Notepad\Notepad.exe
+6/15/2023 3:32:04 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:32:10 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\EdgeWebView\Application\114.0.1823.37\msedgewebview2.exe
+6/15/2023 3:32:10 AM - An error has occurred when trying to scan the file. | C:\Windows\SysWOW64\netstat.exe
+6/15/2023 3:32:11 AM - An error has occurred when trying to scan the file. | C:\Windows\system32\conhost.exe
+6/15/2023 3:32:15 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:32:15 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:32:16 AM - User - notification cleared!
+6/15/2023 3:32:19 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:32:19 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PerfWatson2.exe
+6/15/2023 3:32:19 AM - An error has occurred when trying to scan the file. | C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.11600.0.0_x64__cw5n1h2txyewy\Dashboard\Widgets.exe
+6/15/2023 3:32:19 AM - An error has occurred when trying to scan the file. | C:\Windows\Explorer.EXE
+6/15/2023 3:32:20 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.Dotnet.x64\ServiceHub.DataWarehouseHost.exe
+6/15/2023 3:32:21 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:32:22 AM - Expert mode - started!
+6/15/2023 3:32:26 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 10136
+6/15/2023 3:32:30 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background | Source: Reactive registry scan
+6/15/2023 3:32:30 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5 | Source: Reactive registry scan
+6/15/2023 3:32:44 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Windows\system32\conhost.exe | Source: Reactive Process Scan | Process Name: conhost.exe | PID: 3232
+6/15/2023 3:32:47 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Windows\SysWOW64\netstat.exe | Source: Reactive Process Scan | Process Name: NETSTAT.EXE | PID: 9936
+6/15/2023 3:32:47 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background | Source: Reactive registry scan
+6/15/2023 3:32:52 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5 | Source: Reactive registry scan
+6/15/2023 3:32:53 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50084 | Open Port: 50084 | State: ESTABLISHED | PID: 8796 | Process Name: GitHubDesktop
+6/15/2023 3:32:53 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PerfWatson2.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50178 | Open Port: 50178 | State: ESTABLISHED | PID: 7172 | Process Name: PerfWatson2
+6/15/2023 3:32:53 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Windows\Explorer.EXE | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50193 | Open Port: 50193 | State: ESTABLISHED | PID: 5184 | Process Name: explorer
+6/15/2023 3:32:54 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.Dotnet.x64\ServiceHub.DataWarehouseHost.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50203 | Open Port: 50203 | State: ESTABLISHED | PID: 8372 | Process Name: ServiceHub.DataWarehouseHost
+6/15/2023 3:32:54 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50211 | Open Port: 50211 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:54 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50212 | Open Port: 50212 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:56 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50213 | Open Port: 50213 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:56 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path:  | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 11128
+6/15/2023 3:32:56 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50214 | Open Port: 50214 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:57 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50215 | Open Port: 50215 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:57 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50216 | Open Port: 50216 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:58 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50217 | Open Port: 50217 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:32:59 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50218 | Open Port: 50218 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:33:00 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 10.0.2.15:50219 | Open Port: 50219 | State: ESTABLISHED | PID: 7636 | Process Name: msedge
+6/15/2023 3:33:02 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe | Source: Port Reactive Scan | Protocol: TCPv4 | Local Address: 127.0.0.1:50083 | Open Port: 50083 | State: LISTENING | PID: 796 | Process Name: GitHubDesktop
+6/15/2023 3:33:03 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background | Source: Reactive registry scan
+6/15/2023 3:33:03 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5 | Source: Reactive registry scan
+6/15/2023 3:33:13 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | Source: Reactive Process Scan | Process Name: msedge.exe | PID: 3616
+6/15/2023 3:33:16 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background | Source: Reactive registry scan
+6/15/2023 3:33:17 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5 | Source: Reactive registry scan
+6/15/2023 3:33:18 AM - File initiated scan - started!
+6/15/2023 3:33:19 AM - An error has occurred when trying to scan the file. This could be due to low permissions to access the file, or file was not found. | Path: C:\Users\User\Desktop\WindowsHashesFile.txt | Source: Initiated scan
+6/15/2023 3:33:21 AM - Expert mode - ended!
+6/15/2023 3:33:25 AM - An error has occurred when trying to scan the file. | C:\Windows\SysWOW64\netstat.exe
+6/15/2023 3:33:30 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:33:31 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:33:31 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:33:35 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:33:35 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PerfWatson2.exe
+6/15/2023 3:33:35 AM - An error has occurred when trying to scan the file. | C:\Windows\Explorer.EXE
+6/15/2023 3:33:37 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:33:38 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 3:33:42 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:33:43 AM - User - notification cleared!
+6/15/2023 3:33:46 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:33:46 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:34:01 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:34:02 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:34:07 AM - An error has occurred when trying to scan the file. | C:\Windows\SysWOW64\netstat.exe
+6/15/2023 3:34:07 AM - An error has occurred when trying to scan the file. | C:\Windows\system32\conhost.exe
+6/15/2023 3:34:16 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:34:16 AM - An error has occurred when trying to scan the file. | C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PerfWatson2.exe
+6/15/2023 3:34:17 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 3:34:20 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:34:20 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:34:21 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:34:32 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:34:32 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:34:37 AM - An error has occurred when trying to scan the file. | C:\Users\User\Desktop\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\O2-AV.exe
+6/15/2023 3:34:55 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:34:55 AM - An error has occurred when trying to scan the file. | C:\Windows\Explorer.EXE
+6/15/2023 3:34:55 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:34:56 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:34:58 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:35:02 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:35:03 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:35:20 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:35:21 AM - An error has occurred when trying to scan the file. | C:\Windows\Explorer.EXE
+6/15/2023 3:35:24 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:35:24 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:35:25 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:35:25 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 3:35:25 AM - An error has occurred when trying to scan the file. | C:\Windows\system32\prevhost.exe
+6/15/2023 3:35:25 AM - An error has occurred when trying to scan the file. | C:\Windows\SysWOW64\prevhost.exe
+6/15/2023 3:35:27 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:35:29 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:35:33 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:35:33 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:35:39 AM - An error has occurred when trying to scan the file. | C:\Windows\SysWOW64\netstat.exe
+6/15/2023 3:35:49 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:35:50 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 3:35:57 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\GitHubDesktop\app-3.2.3\GitHubDesktop.exe
+6/15/2023 3:35:57 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 3:35:57 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 3:36:01 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 5:53:45 AM - O2-Anti-Virus has launched and started! Hurray!
+6/15/2023 5:53:46 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 5:53:46 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 5:53:47 AM - An error has occurred when trying to scan the file. | C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+6/15/2023 5:53:47 AM - An error has occurred when trying to scan the file. | C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+6/15/2023 5:53:47 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+6/15/2023 5:53:47 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+6/15/2023 5:53:47 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 5:53:50 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\114.0.1823.37\identity_helper.exe
+6/15/2023 5:53:50 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 5:53:51 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\114.0.1823.37\identity_helper.exe
+6/15/2023 5:53:51 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 5:54:00 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6/15/2023 5:54:00 AM - An error has occurred when trying to scan the file. | "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start /prefetch:5
+6/15/2023 5:54:04 AM - An error has occurred when trying to scan the file. | 
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 5:54:05 AM - An error has occurred when trying to scan the file. | C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+6/15/2023 5:54:14 AM - An error has occurred when trying to scan the file. | "C:\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background

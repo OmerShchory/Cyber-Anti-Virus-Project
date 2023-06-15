@@ -68,9 +68,11 @@ namespace O2_AV
                     // Now, scan the file
                     if (result[0] == "1")
                     {
+                        msg = "ALERT! A VIRUS WAS DETECTED - Black list file is detected, this is a virus." + " | " + fileToScan.ToString();
+                        AVFiles.AppendNextDetection(msg);
+
                         if (this.isExpertMode) //Further explaination
                         {
-                            msg = "ALERT! A VIRUS WAS DETECTED - Black list file is detected, this is a virus." + " | " + fileToScan.ToString();
                             logHandler.QueueMessageToLog(msg);
                         }
                         else // Not expert mode
@@ -82,9 +84,11 @@ namespace O2_AV
                     }
                     else if (result[0] == "2")
                     {
+                        msg = "ALERT! Suspected as a VIRUS due to a high similarity rate." + " | " + fileToScan.ToString();
+                        AVFiles.AppendNextDetection(msg);
+
                         if (this.isExpertMode) //Further explaination
                         {
-                            msg = "ALERT! Suspected as a VIRUS due to a high similarity rate" + " | " + fileToScan.ToString();
                             logHandler.QueueMessageToLog(msg);
                         }
                         else // Not expert mode
@@ -108,10 +112,11 @@ namespace O2_AV
                     }
                     else if (result[0] == "4")
                     {
+                        msg = "ALERT! An unknown file was detected - The file wasn't detected in the black list, " +
+                                "nor the white list, could be a virus, do not trust." + " | " + fileToScan.ToString();
+                        AVFiles.AppendNextDetection(msg);
                         if (this.isExpertMode) //Further explaination
                         {
-                            msg = "ALERT! An unknown file was detected - The file wasn't detected in the black list, " +
-                                "nor the white list, could be a virus, do not trust." + " | " + fileToScan.ToString();
                             logHandler.QueueMessageToLog(msg);
                         }
                         else // Not expert mode

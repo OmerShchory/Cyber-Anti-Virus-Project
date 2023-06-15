@@ -111,7 +111,7 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // Handle any exceptions that might occur
-                string msg = $"Error: {ex.Message}";
+                string msg = $"An error occurred while trying to open the log file: {ex.Message}";
                 logHandler.QueueMessageToLog(msg);
             }
 
@@ -180,6 +180,26 @@ namespace O2_AV
 
                 }
             }
+        }
+
+        private void ShowDetectionsBtn_Click(object sender, EventArgs e)
+        {
+            // Specify the path of the text file you want to open
+            string filePath = @"./utils/Past Detections.txt";
+
+            try
+            {
+                this.logHandler.QueueMessageToLog("User - Log file displayed");
+                // Launch Notepad and open the file
+                Process.Start("notepad.exe", filePath);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur
+                string msg = $"An error occurred while trying to open Past Detections file: {ex.Message}";
+                logHandler.QueueMessageToLog(msg);
+            }
+
         }
     }
 }
