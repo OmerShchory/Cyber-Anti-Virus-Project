@@ -8,7 +8,7 @@ namespace O2_AV
 {
     internal class LogHandler
     {
-        private Queue<string> messages = new Queue<string>();
+        private Queue<string[]> messages = new Queue<string[]>();
         private Form1 form1;
         private StreamWriter writer;
         private object writerLock = new object();
@@ -26,11 +26,11 @@ namespace O2_AV
             thread.Start();
         }
 
-        public void QueueMessageToLog(string notifications_msg)
+        public void QueueMessageToLog(string[] msgs)
         {
             lock (messages)
             {
-                messages.Enqueue(notifications_msg);
+                messages.Enqueue(msgs);
             }
         }
 
@@ -38,19 +38,20 @@ namespace O2_AV
         {
             while (true)
             {
-                string message = null;
+                string[] messages = null;
 
-                lock (messages)
+                lock (this.messages)
                 {
-                    if (messages.Count > 0)
+                    if (this.messages.Count > 0)
                     {
-                        message = messages.Dequeue();
+                        messages = this.messages.Dequeue();
                     }
                 }
 
-                if (message != null)
+                if (messages != null) // messages[0] - log message | messages[1] - notifications message
                 {
-                    string logMessage = $"{DateTime.Now} - {message}";
+                    string logMessage = $"{DateTime.Now} - {messages[0]}";
+                    string notificationsMessage = $"{DateTime.Now} - {messages[1]}";
 
                     // Lock the writerLock object to ensure only one thread will
                     // get access to the streamWriter
@@ -62,7 +63,7 @@ namespace O2_AV
                     // Ensure that the UI will be updated
                     form1.Invoke(new Action(() =>
                     {
-                        form1.WriteToDisplayTextBox(logMessage + Environment.NewLine);
+                        form1.WriteToDisplayTextBox(notificationsMessage + Environment.NewLine);
                     }));
                 }
             }

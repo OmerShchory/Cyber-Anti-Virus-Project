@@ -60,85 +60,68 @@ namespace O2_AV
                         // Nothing in the queue
                     }
                 }
-
                 if (fileToScan != null)
                 {
                     string[] result = fs.Scan(fileToScan.Path);
-                    string msg;
+                    string[] msgs = {"", ""};
                     // Now, scan the file
                     if (result[0] == "1")
                     {
-                        msg = "ALERT! A VIRUS WAS DETECTED - Black list file is detected, this is a virus." + " | " + fileToScan.ToString();
-                        AVFiles.AppendNextDetection(msg);
+                        msgs[0] = "ALERT! A VIRUS WAS DETECTED - Black list file is detected, this is a virus." + " | " + fileToScan.ToString();
+                        msgs[1] = "ALERT! A VIRUS WAS DETECTED" + " | " + fileToScan.Path;
+                        AVFiles.AppendNextDetection(msgs[0]);
 
                         if (this.isExpertMode) //Further explaination
                         {
-                            logHandler.QueueMessageToLog(msg);
+                            msgs[1] = msgs[0]; //we want to print the detailed message in the message box
                         }
-                        else // Not expert mode
-                        {
-                            msg = "ALERT! A VIRUS WAS DETECTED" + " | " + fileToScan.Path;
-                            logHandler.QueueMessageToLog(msg);
-                        }
-
+                        logHandler.QueueMessageToLog(msgs);
                     }
                     else if (result[0] == "2")
                     {
-                        msg = "ALERT! Suspected as a VIRUS due to a high similarity rate." + " | " + fileToScan.ToString();
-                        AVFiles.AppendNextDetection(msg);
+                        msgs[0] = "ALERT! Suspected as a VIRUS due to a high similarity rate." + " | " + fileToScan.ToString();
+                        msgs[1] = "ALERT! This file is suspected as a VIRUS." + " | " + fileToScan.Path;
+                        AVFiles.AppendNextDetection(msgs[0]);
 
                         if (this.isExpertMode) //Further explaination
                         {
-                            logHandler.QueueMessageToLog(msg);
+                            msgs[1] = msgs[0]; //we want to print the detailed message in the message box
                         }
-                        else // Not expert mode
-                        {
-                            msg = "ALERT! This file is suspected as a VIRUS." + " | " + fileToScan.Path;
-                            logHandler.QueueMessageToLog(msg);
-                        }
+                        logHandler.QueueMessageToLog(msgs);
                     }
                     else if (result[0] == "3")
                     {
+                        msgs[0] = "A safe file was scanned - White list file is detected, this is not a virus." + " | " + fileToScan.ToString();
+                        msgs[1] = "A safe file was scanned." + " | " + fileToScan.Path;
                         if (this.isExpertMode) //Further explaination
                         {
-                            msg = "A safe file was scanned - White list file is detected, this is not a virus." + " | " + fileToScan.ToString();
-                            logHandler.QueueMessageToLog(msg);
+                            msgs[1] = msgs[0]; //we want to print the detailed message in the message box
                         }
-                        else // Not expert mode
-                        {
-                            msg = "A safe file was scanned." + " | " + fileToScan.Path;
-                            logHandler.QueueMessageToLog(msg);
-                        }
+                        logHandler.QueueMessageToLog(msgs);
                     }
                     else if (result[0] == "4")
                     {
-                        msg = "ALERT! An unknown file was detected - The file wasn't detected in the black list, " +
+                        msgs[0] = "ALERT! An unknown file was detected - The file wasn't detected in the black list, " +
                                 "nor the white list, could be a virus, do not trust." + " | " + fileToScan.ToString();
-                        AVFiles.AppendNextDetection(msg);
+                        msgs[1] = "ALERT! An unknown file was detected" + " | " + fileToScan.Path;
+                        AVFiles.AppendNextDetection(msgs[0]);
                         if (this.isExpertMode) //Further explaination
                         {
-                            logHandler.QueueMessageToLog(msg);
+                            msgs[1] = msgs[0]; //we want to print the detailed message in the message box
                         }
-                        else // Not expert mode
-                        {
-                            msg = "ALERT! An unknown file was detected" + " | " + fileToScan.Path;
-                            logHandler.QueueMessageToLog(msg);
-                        }
+                        logHandler.QueueMessageToLog(msgs);
                     }
                     else
                     {
+                        msgs[0] = "An error has occurred when trying to scan the file. This could be " +
+                                "due to low permissions to access the file, or file was not found." + " | " + fileToScan.ToString();
+                        msgs[1] = "An error has occurred when trying to scan the file." + " | " + fileToScan.Path;
+
                         if (this.isExpertMode) //Further explaination
                         {
-                            msg = "An error has occurred when trying to scan the file. This could be " +
-                                "due to low permissions to access the file, or file was not found." + " | " + fileToScan.ToString();
-                            logHandler.QueueMessageToLog(msg);
+                            msgs[1] = msgs[0]; //we want to print the detailed message in the message box
                         }
-                        else // Not expert mode
-                        {
-                            msg = "An error has occurred when trying to scan the file." + " | " + fileToScan.Path;
-                            logHandler.QueueMessageToLog(msg);
-                        }
-
+                        logHandler.QueueMessageToLog(msgs);
                     }
                 }
             }
