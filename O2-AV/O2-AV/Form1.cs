@@ -33,7 +33,7 @@ namespace O2_AV
             engine.Start();
 
             // Start Port Scanner
-            this.portScanner = new PortScanner(this.engine);
+            this.portScanner = new PortScanner(this.engine, this.logHandler);
             this.portScanner.Start();
 
             // Start Process Scanner
@@ -46,17 +46,17 @@ namespace O2_AV
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
-            //watcher.Watch(@"C:\Users\User\AppData");
-            //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
-            //watcher.Watch(@"C:\Program Files");
-            //watcher.Watch(@"C:\Program Files (x86)");
-            //watcher.Watch(@"C:\Users\User\Desktop");
-            //watcher.Watch(@"C:\Users\User\Downloads");
-            //watcher.Watch(@"C:\Users\User\Documents");
-            //watcher.Watch(@"C:\Windows");
-            //watcher.Watch(@"C:\Users\User\Pictures");
-            //watcher.Watch(@"C:\Users\User\Music");
-            //watcher.Watch(@"C:\Users\User\Videos");
+            watcher.Watch(@"C:\Users\User\AppData");
+            watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
+            watcher.Watch(@"C:\Program Files");
+            watcher.Watch(@"C:\Program Files (x86)");
+            watcher.Watch(@"C:\Users\User\Desktop");
+            watcher.Watch(@"C:\Users\User\Downloads");
+            watcher.Watch(@"C:\Users\User\Documents");
+            watcher.Watch(@"C:\Windows");
+            watcher.Watch(@"C:\Users\User\Pictures");
+            watcher.Watch(@"C:\Users\User\Music");
+            watcher.Watch(@"C:\Users\User\Videos");
 
             logHandler.QueueMessageToLog("O2-Anti-Virus has launched and started! Hurray!");
         }
