@@ -88,9 +88,7 @@ namespace O2_AV
             {
                 res[0] = "5";
                 return res;
-
             }
-
         }
 
         private static bool CompareBytes(byte[] lhs, byte[] rhs)

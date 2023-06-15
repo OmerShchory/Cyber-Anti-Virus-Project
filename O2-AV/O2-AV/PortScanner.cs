@@ -13,10 +13,12 @@ namespace O2_AV
     {
         private bool scanningActive;
         private AVEngine engine;
+        LogHandler logHandler;
 
-        public PortScanner(AVEngine engine) 
+        public PortScanner(AVEngine engine, LogHandler logHandler) 
         {
             this.engine = engine;
+            this.logHandler = logHandler;
         }
 
         public void Start()
@@ -58,10 +60,6 @@ namespace O2_AV
                     StreamReader stdError = p.StandardError;
                     string content = stdOutput.ReadToEnd() + stdError.ReadToEnd();
                     string exitStatus = p.ExitCode.ToString();
-                    if (exitStatus != "0")
-                    {
-                        // Command Errored. Handle Here If Need Be
-                    }
 
                     //Get The Rows
                     string[] rows = Regex.Split(content, "\r\n");
@@ -85,38 +83,24 @@ namespace O2_AV
                             {
                                 // high CPU usage
                                 string processName = GetProcessName(pid);
-                                //
-                                PortToScan pts = new PortToScan(protocol, localAddress, openPort, state, pid, processName, processPath);
-
-                                //Console.WriteLine(protocol, localAddress, openPort, state, pid, processName, processPath);
                                 
+                                PortToScan pts = new PortToScan(protocol, localAddress, openPort, state, pid, processName, processPath);                                
                                 // Pushing the the engine
                                 this.engine.QueueFileForScan(new FileToScan(processPath, "Port Reactive Scan | " + pts.ToString()));  
-
-                              
                             }
-
                         }
                     }
-                    // p.Kill();
                 }
-
             }
             catch (Exception ex)
             {
-
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
+                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {ex.Message}");
                 throw;
-
             }
-
-            //return Ports;
         }
 
-        public static string GetProcessName(int pid)
+        public string GetProcessName(int pid)
         {
-
             string processName;
 
             try
@@ -126,6 +110,7 @@ namespace O2_AV
             catch (Exception e)
             {
                 processName = "-";
+                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {e.Message}");
             }
             return processName;
         }
@@ -147,16 +132,9 @@ namespace O2_AV
                     }
                 }
             }
-            catch (Win32Exception ex)
-            {
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
-                throw;
-            }
             catch (Exception ex)
             {
-                //Record record = new Record(logType.ERROR, ex.Message, "", "");
-                //engine.printToLogFile(record);
+                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {ex.Message}");
                 throw;
             }
             return null;

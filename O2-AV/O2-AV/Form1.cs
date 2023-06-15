@@ -33,12 +33,12 @@ namespace O2_AV
             engine.Start();
 
             // Start Port Scanner
-            //this.portScanner = new PortScanner(this.engine);
-            //this.portScanner.Start();
+            this.portScanner = new PortScanner(this.engine);
+            this.portScanner.Start();
 
             // Start Process Scanner
-            //this.processScanner = new ProcessScanner(this.engine);
-            //this.processScanner.Start();
+            this.processScanner = new ProcessScanner(this.engine);
+            this.processScanner.Start();
 
             // Start registry reactive scan for programs that register for automatic start up
             this.registryScan = new RegistryScan(this.engine, this.logHandler);
