@@ -42,10 +42,10 @@
             // headerLbl
             // 
             this.headerLbl.AutoSize = true;
-            this.headerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.headerLbl.Font = new System.Drawing.Font("Mongolian Baiti", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLbl.Location = new System.Drawing.Point(507, 57);
             this.headerLbl.Name = "headerLbl";
-            this.headerLbl.Size = new System.Drawing.Size(517, 91);
+            this.headerLbl.Size = new System.Drawing.Size(504, 85);
             this.headerLbl.TabIndex = 0;
             this.headerLbl.Text = "O2 Anti Virus";
             this.headerLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -53,7 +53,7 @@
             // folderScanBtn
             // 
             this.folderScanBtn.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.folderScanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.folderScanBtn.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.folderScanBtn.Location = new System.Drawing.Point(36, 55);
             this.folderScanBtn.Name = "folderScanBtn";
             this.folderScanBtn.Size = new System.Drawing.Size(320, 123);
@@ -65,7 +65,7 @@
             // fileScanBtn
             // 
             this.fileScanBtn.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.fileScanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.fileScanBtn.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileScanBtn.Location = new System.Drawing.Point(36, 192);
             this.fileScanBtn.Name = "fileScanBtn";
             this.fileScanBtn.Size = new System.Drawing.Size(320, 123);
@@ -77,7 +77,7 @@
             // showLogBtn
             // 
             this.showLogBtn.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.showLogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.showLogBtn.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showLogBtn.Location = new System.Drawing.Point(36, 489);
             this.showLogBtn.Name = "showLogBtn";
             this.showLogBtn.Size = new System.Drawing.Size(320, 123);
@@ -89,7 +89,7 @@
             // clearBtn
             // 
             this.clearBtn.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.clearBtn.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.Location = new System.Drawing.Point(36, 640);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(320, 123);
@@ -101,10 +101,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(382, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 37);
+            this.label1.Size = new System.Drawing.Size(242, 38);
             this.label1.TabIndex = 5;
             this.label1.Text = "Notifications:";
             // 
@@ -120,10 +120,10 @@
             // isExpertModeChckbx
             // 
             this.isExpertModeChckbx.AutoSize = true;
-            this.isExpertModeChckbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.isExpertModeChckbx.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isExpertModeChckbx.Location = new System.Drawing.Point(1518, 192);
             this.isExpertModeChckbx.Name = "isExpertModeChckbx";
-            this.isExpertModeChckbx.Size = new System.Drawing.Size(222, 41);
+            this.isExpertModeChckbx.Size = new System.Drawing.Size(225, 42);
             this.isExpertModeChckbx.TabIndex = 7;
             this.isExpertModeChckbx.Text = "Expert Mode";
             this.isExpertModeChckbx.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -133,7 +133,7 @@
             // ShowDetectionsBtn
             // 
             this.ShowDetectionsBtn.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.ShowDetectionsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ShowDetectionsBtn.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowDetectionsBtn.Location = new System.Drawing.Point(36, 335);
             this.ShowDetectionsBtn.Name = "ShowDetectionsBtn";
             this.ShowDetectionsBtn.Size = new System.Drawing.Size(320, 123);
