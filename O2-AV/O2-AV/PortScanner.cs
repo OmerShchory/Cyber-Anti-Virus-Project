@@ -94,7 +94,9 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {ex.Message}");
+                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string[] logMsgs = { logMsg, logMsg };
+                this.logHandler.QueueMessageToLog(logMsgs);
                 throw;
             }
         }
@@ -110,7 +112,9 @@ namespace O2_AV
             catch (Exception e)
             {
                 processName = "-";
-                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {e.Message}");
+                string logMsg = $"An error occurred during registry scan: {e.Message}";
+                string[] logMsgs = { logMsg, logMsg };
+                this.logHandler.QueueMessageToLog(logMsgs);
             }
             return processName;
         }
@@ -134,7 +138,9 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                this.logHandler.QueueMessageToLog($"An error occurred during registry scan: {ex.Message}");
+                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string[] logMsgs = { logMsg, logMsg };
+                this.logHandler.QueueMessageToLog(logMsgs);
                 throw;
             }
             return null;

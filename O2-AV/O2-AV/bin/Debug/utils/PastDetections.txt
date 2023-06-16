@@ -1,0 +1,1 @@
+16/06/2023 15:04:45 - ALERT! A VIRUS WAS DETECTED - Black list file is detected, this is a virus. | Path: C:\Users\omrir\Desktop\Git projects\Cyber-Anti-Virus-Project\O2-AV\O2-AV\bin\Debug\utils\viruses\mw-1.1-scenario1-static-signature.exe | Source: Initiated scan

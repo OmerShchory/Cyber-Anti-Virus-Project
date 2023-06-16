@@ -21,7 +21,9 @@ namespace O2_AV
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
         {
-            logHandler.QueueMessageToLog("File deleted:" + e.FullPath);
+            string logMsg = "File deleted:" + e.FullPath;
+            string[] logMsgs = { logMsg, "" };
+            logHandler.QueueMessageToLog(logMsgs);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)

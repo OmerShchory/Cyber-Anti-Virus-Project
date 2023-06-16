@@ -61,10 +61,14 @@ namespace O2_AV
                         writer.Flush();
                     }
                     // Ensure that the UI will be updated
-                    form1.Invoke(new Action(() =>
+                    if (!(messages[1] == ""))
                     {
-                        form1.WriteToDisplayTextBox(notificationsMessage + Environment.NewLine);
-                    }));
+                        form1.Invoke(new Action(() =>
+                        {
+                            form1.WriteToDisplayTextBox(notificationsMessage + Environment.NewLine);
+                        }));
+                    }
+                    
                 }
             }
         }

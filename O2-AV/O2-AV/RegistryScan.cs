@@ -56,7 +56,9 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // Handle any exceptions that occur during registry scanning
-                this.LogHandler.QueueMessageToLog($"An error occurred during registry scan: {ex.Message}");
+                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string[] logMsgs = { logMsg, logMsg };
+                this.LogHandler.QueueMessageToLog(logMsgs);
             }
         }
     }
