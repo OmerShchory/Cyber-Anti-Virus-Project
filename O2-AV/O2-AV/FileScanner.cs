@@ -58,6 +58,17 @@ namespace O2_AV
                     }
                 }
 
+                for (int i = 0; i < this.whiteList.Count(); i++)
+                {
+                    if (CompareBytes(hash, this.whiteList[i]))
+                    {
+                        // Return 2 if the file is detected as known non virus
+                        res[0] = "3";
+                        return res;
+                    }
+                }
+
+
                 string[] viruses = Directory.GetFiles("./utils/viruses");
                 double similarityRes = 0;
                 for (int i = 0; i < viruses.Count(); i++)
@@ -69,17 +80,7 @@ namespace O2_AV
                         return res;
                     }
                 }
-
-                for (int i = 0; i < this.whiteList.Count(); i++)
-                {
-                    if (CompareBytes(hash, this.whiteList[i]))
-                    {
-                        // Return 2 if the file is detected as known non virus
-                        res[0] = "3";
-                        return res;
-                    }
-                }
-
+               
                 // Return 3 if the file is unknown
                 res[0] = "4";
                 return res;
@@ -126,8 +127,8 @@ namespace O2_AV
             var psi = new ProcessStartInfo();
        
             //psi.FileName = @"C:\Users\user1\AppData\Local\Microsoft\WindowsApps\python.exe";
-            //psi.FileName = @"C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
-            psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
+            psi.FileName = @"C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
+            //psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
 
             // 2) Provide script and arguments
             psi.Arguments = $"\"{pythonScript}\" \"{file1}\" \"{file2}\"";
