@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormClosing += Form1_FormClosing;
             this.headerLbl = new System.Windows.Forms.Label();
             this.folderScanBtn = new System.Windows.Forms.Button();
             this.fileScanBtn = new System.Windows.Forms.Button();

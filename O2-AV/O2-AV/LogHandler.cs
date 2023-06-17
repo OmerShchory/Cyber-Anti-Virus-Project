@@ -64,11 +64,20 @@ namespace O2_AV
                     // Ensure that the UI will be updated
                     if (!(messages[1] == ""))
                     {
-                        form1.Invoke(new Action(() =>
+                        try
                         {
-                            form1.WriteToDisplayTextBox(notificationsMessage
-                                + Environment.NewLine);
-                        }));
+                            form1.Invoke(new Action(() =>
+                            {
+                                form1.WriteToDisplayTextBox(notificationsMessage
+                                    + Environment.NewLine);
+                            }));
+                        }
+                        catch
+                        {
+                            // The message didn't made it to the notifications textbox
+                            // before the from has been closed
+                        }
+
                     }
 
                 }
