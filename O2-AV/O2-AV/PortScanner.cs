@@ -33,7 +33,7 @@ namespace O2_AV
             while (scanningActive)
             {
                 GetNetStatPorts();
-                Thread.Sleep(15000);
+                Thread.Sleep(30000);
             }
         }
 

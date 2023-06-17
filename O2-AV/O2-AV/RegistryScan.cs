@@ -28,7 +28,7 @@ namespace O2_AV
             while (scanningActive)
             {
                 RegistryReactiveScan();
-                Thread.Sleep(15000);
+                Thread.Sleep(30000);
             }
         }
 
