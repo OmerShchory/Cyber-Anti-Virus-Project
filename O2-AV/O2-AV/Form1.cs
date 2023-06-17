@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -61,7 +62,8 @@ namespace O2_AV
 
         private void FolderScanBtn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            using (FolderBrowserDialog folderDialog
+                = new FolderBrowserDialog())
             {
                 DialogResult result = folderDialog.ShowDialog();
                 if (result == DialogResult.OK && 
@@ -160,7 +162,7 @@ namespace O2_AV
 
         public void WriteToDisplayTextBox(string message)
         {
-            displayTextBox.Text += message + '\n'; 
+            displayTextBox.Text += message + '\n';
         }
 
         private void IsExpertModeChckbx_CheckedChanged(object sender, EventArgs e)

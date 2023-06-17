@@ -43,7 +43,7 @@ namespace O2_AV
 
         public static void AppendNextDetection(string message)
         {
-            string FilePath = "./utils/PastDetections.txt";
+            string FilePath = "./utils/Past Detections.txt";
 
             try
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Threading;
 
@@ -65,11 +66,11 @@ namespace O2_AV
                     {
                         form1.Invoke(new Action(() =>
                         {
-                            form1.WriteToDisplayTextBox(notificationsMessage 
+                            form1.WriteToDisplayTextBox(notificationsMessage
                                 + Environment.NewLine);
                         }));
                     }
-                    
+
                 }
             }
         }

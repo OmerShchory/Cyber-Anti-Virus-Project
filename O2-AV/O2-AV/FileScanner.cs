@@ -61,7 +61,7 @@ namespace O2_AV
                 {
                     if (CompareBytes(hash, this.whiteList[i]))
                     {
-                        // Return 2 if the file is detected as non virus
+                        // Return 3 if the file is detected as non virus
                         res[0] = "3";
                         return res;
                     }

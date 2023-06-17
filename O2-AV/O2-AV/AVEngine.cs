@@ -74,6 +74,7 @@ namespace O2_AV
                             " this is a virus." + " | " + fileToScan.ToString();
                         msgs[1] = "ALERT! A VIRUS WAS DETECTED" + " | " + 
                             fileToScan.Path;
+                      
                         AVFiles.AppendNextDetection(msgs[0]);
                         //Further explaination
                         if (this.isExpertMode) 
@@ -90,6 +91,7 @@ namespace O2_AV
                             " | " + fileToScan.ToString();
                         msgs[1] = "ALERT! This file is suspected as a VIRUS." +
                             " | " + fileToScan.Path;
+                        
                         AVFiles.AppendNextDetection(msgs[0]);
                         //Further explaination
                         if (this.isExpertMode) 
@@ -120,6 +122,7 @@ namespace O2_AV
                                 " | " + fileToScan.ToString();
                         msgs[1] = "ALERT! An unknown file was detected" + " | " + 
                             fileToScan.Path;
+                        
                         AVFiles.AppendNextDetection(msgs[0]);
                         if (this.isExpertMode) //Further explaination
                         {
