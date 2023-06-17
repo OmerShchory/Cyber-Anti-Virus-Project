@@ -61,7 +61,7 @@ namespace O2_AV
                 {
                     if (CompareBytes(hash, this.whiteList[i]))
                     {
-                        // Return 2 if the file is detected as known non virus
+                        // Return 2 if the file is detected as non virus
                         res[0] = "3";
                         return res;
                     }
@@ -111,7 +111,8 @@ namespace O2_AV
         }
 
         // Read the Black List from file and store it for comparisons
-        private static List<byte[]> ReadFromFileToList(string[] byteArrayFromFile)
+        private static List<byte[]> 
+            ReadFromFileToList(string[] byteArrayFromFile)
         {
             List<byte[]> listToReturn = new List<byte[]>();
             for (int i = 0; i < byteArrayFromFile.Length; i++)

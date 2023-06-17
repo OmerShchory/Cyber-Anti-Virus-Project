@@ -46,7 +46,8 @@ namespace O2_AV
 
         private void ScannerThread()
         {
-            while (true) // Scanner thread loops until the program exits
+            // Scanner thread loops until the program exits
+            while (true) 
             {
                 // To hold what we take out of the queue
                 FileToScan fileToScan = null; 

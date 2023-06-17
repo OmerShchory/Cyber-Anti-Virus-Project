@@ -53,8 +53,8 @@ namespace O2_AV
                     string logMessage = $"{DateTime.Now} - {messages[0]}";
                     string notificationsMessage = $"{DateTime.Now} - {messages[1]}";
 
-                    // Lock the writerLock object to ensure only one thread will
-                    // get access to the streamWriter
+                    // Lock the writerLock object to ensure only
+                    // one thread will get access to the streamWriter
                     lock (writerLock)
                     {
                         writer.WriteLine(logMessage);
