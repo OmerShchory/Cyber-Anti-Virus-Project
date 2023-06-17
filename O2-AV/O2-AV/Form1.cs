@@ -34,28 +34,29 @@ namespace O2_AV
             this.processScanner = new ProcessScanner(this.engine);
             this.processScanner.Start();
 
-            // Start registry reactive scan for programs that register for automatic start up
+            // Start registry reactive scan for programs
+            // that register for automatic start up
             this.registryScan = new RegistryScan(this.engine, this.logHandler);
             this.registryScan.Start();
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
             watcher.Watch("./to scan");
-            //watcher.Watch(@"C:\Users\User\AppData");
-            //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
-            //watcher.Watch(@"C:\Program Files");
-            //watcher.Watch(@"C:\Program Files (x86)");
-            //watcher.Watch(@"C:\Users\User\Desktop");
-            //watcher.Watch(@"C:\Users\User\Downloads");
-            //watcher.Watch(@"C:\Users\User\Documents");
-            //watcher.Watch(@"C:\Windows");
-            //watcher.Watch(@"C:\Users\User\Pictures");
-            //watcher.Watch(@"C:\Users\User\Music");
-            //watcher.Watch(@"C:\Users\User\Videos");
+            watcher.Watch(@"C:\Users\User\AppData");
+            watcher.Watch(@"C:\Users\User\AppData\Roaming
+                \Microsoft\Windows\Start Menu\Programs\Startup");
+            watcher.Watch(@"C:\Program Files");
+            watcher.Watch(@"C:\Program Files (x86)");
+            watcher.Watch(@"C:\Users\User\Desktop");
+            watcher.Watch(@"C:\Users\User\Downloads");
+            watcher.Watch(@"C:\Users\User\Documents");
+            watcher.Watch(@"C:\Windows");
+            watcher.Watch(@"C:\Users\User\Pictures");
+            watcher.Watch(@"C:\Users\User\Music");
+            watcher.Watch(@"C:\Users\User\Videos");
 
             string logMmg = "O2-Anti-Virus has launched and started! Hurray!";
             string[] logMsgs = {logMmg,logMmg};
-            //logHandler.QueueMessageToLog(logMsgs);
         }
 
         private void FolderScanBtn_Click(object sender, EventArgs e)
@@ -76,7 +77,8 @@ namespace O2_AV
                     this.logHandler.QueueMessageToLog(logMsgs);
                     foreach (string file in files)
                     {
-                        engine.QueueFileForScan(new FileToScan(file, "Initiated scan"));
+                        engine.QueueFileForScan(new FileToScan
+                            (file, "Initiated scan"));
                     }
 
                     logMsg = "Directory initiated scan - finished!";

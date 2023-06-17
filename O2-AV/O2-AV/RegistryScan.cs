@@ -36,10 +36,11 @@ namespace O2_AV
         {
             try
             {
-                string keyPath = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
+                string keyPath = 
+                    @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
                 // Open the registry key that contains the startup programs
-                using 
-                (RegistryKey key = Registry.CurrentUser.OpenSubKey(keyPath, false))
+                using(RegistryKey key = 
+                Registry.CurrentUser.OpenSubKey(keyPath, false))
                 {
                     if (key != null)
                     {

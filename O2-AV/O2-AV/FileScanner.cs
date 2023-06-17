@@ -117,7 +117,6 @@ namespace O2_AV
             for (int i = 0; i < byteArrayFromFile.Length; i++)
             {
                 listToReturn.Add(ConvertHexStringToByteArray(byteArrayFromFile[i]));
-                //blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
             }
             return listToReturn;
         }

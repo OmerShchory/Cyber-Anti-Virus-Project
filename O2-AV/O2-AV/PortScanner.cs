@@ -99,7 +99,8 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string logMsg = $"An error occurred during registry scan: " +
+                    $"{ex.Message}";
                 string[] logMsgs = { logMsg, logMsg };
                 this.logHandler.QueueMessageToLog(logMsgs);
                 throw;
@@ -117,7 +118,8 @@ namespace O2_AV
             catch (Exception e)
             {
                 processName = "-";
-                string logMsg = $"An error occurred during registry scan: {e.Message}";
+                string logMsg = $"An error occurred during registry scan: " +
+                    $"{e.Message}";
                 string[] logMsgs = { logMsg, logMsg };
                 this.logHandler.QueueMessageToLog(logMsgs);
             }
@@ -130,11 +132,13 @@ namespace O2_AV
             {
                 string wmiQueryString = "SELECT ProcessId, ExecutablePath " +
                     "FROM Win32_Process WHERE ProcessId = " + processId;
-                using (var searcher = new ManagementObjectSearcher(wmiQueryString))
+                using (var searcher = new ManagementObjectSearcher
+                    (wmiQueryString))
                 {
                     using (var results = searcher.Get())
                     {
-                        ManagementObject mo = results.Cast<ManagementObject>().FirstOrDefault();
+                        ManagementObject mo = 
+                            results.Cast<ManagementObject>().FirstOrDefault();
                         if (mo != null)
                         {
                             return (string)mo["ExecutablePath"];
@@ -144,7 +148,8 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string logMsg = $"An error occurred during registry scan: " +
+                    $"{ex.Message}";
                 string[] logMsgs = { logMsg, logMsg };
                 this.logHandler.QueueMessageToLog(logMsgs);
                 throw;

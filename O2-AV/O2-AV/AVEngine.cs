@@ -68,9 +68,11 @@ namespace O2_AV
                     // Now, scan the file
                     if (result[0] == "1")
                     {
-                        msgs[0] = "ALERT! A VIRUS WAS DETECTED - Black list file is detected," +
+                        msgs[0] = "ALERT! A VIRUS WAS DETECTED - " +
+                            "Black list file is detected," +
                             " this is a virus." + " | " + fileToScan.ToString();
-                        msgs[1] = "ALERT! A VIRUS WAS DETECTED" + " | " + fileToScan.Path;
+                        msgs[1] = "ALERT! A VIRUS WAS DETECTED" + " | " + 
+                            fileToScan.Path;
                         AVFiles.AppendNextDetection(msgs[0]);
                         //Further explaination
                         if (this.isExpertMode) 
@@ -82,9 +84,11 @@ namespace O2_AV
                     }
                     else if (result[0] == "2")
                     {
-                        msgs[0] = "ALERT! Suspected as a VIRUS due to a high similarity rate." +
+                        msgs[0] = "ALERT! Suspected as a VIRUS due to a " +
+                            "high similarity rate." +
                             " | " + fileToScan.ToString();
-                        msgs[1] = "ALERT! This file is suspected as a VIRUS." + " | " + fileToScan.Path;
+                        msgs[1] = "ALERT! This file is suspected as a VIRUS." +
+                            " | " + fileToScan.Path;
                         AVFiles.AppendNextDetection(msgs[0]);
                         //Further explaination
                         if (this.isExpertMode) 
@@ -96,8 +100,9 @@ namespace O2_AV
                     }
                     else if (result[0] == "3")
                     {
-                        msgs[0] = "A safe file was scanned - White list file is detected," +
-                            " this is not a virus." + " | " + fileToScan.ToString();
+                        msgs[0] = "A safe file was scanned - White list file is" +
+                            " detected this is not a virus." + " | " + 
+                            fileToScan.ToString();
                         msgs[1] = "A safe file was scanned." + " | " + fileToScan.Path;
                         if (this.isExpertMode) //Further explaination
                         {
@@ -112,7 +117,8 @@ namespace O2_AV
                             "The file wasn't detected in the black list, " +
                                 "nor the white list, could be a virus, do not trust." + 
                                 " | " + fileToScan.ToString();
-                        msgs[1] = "ALERT! An unknown file was detected" + " | " + fileToScan.Path;
+                        msgs[1] = "ALERT! An unknown file was detected" + " | " + 
+                            fileToScan.Path;
                         AVFiles.AppendNextDetection(msgs[0]);
                         if (this.isExpertMode) //Further explaination
                         {
@@ -123,8 +129,9 @@ namespace O2_AV
                     }
                     else
                     {
-                        msgs[0] = "An error has occurred when trying to scan the file. This could be " +
-                                "due to low permissions to access the file, or file was not found." +
+                        msgs[0] = "An error has occurred when trying to scan the file." +
+                            " This could be due to low permissions to access " +
+                            "the file, or file was not found." +
                                 " | " + fileToScan.ToString();
                         msgs[1] = "An error has occurred when trying to scan the file." + " | " 
                             + fileToScan.Path;

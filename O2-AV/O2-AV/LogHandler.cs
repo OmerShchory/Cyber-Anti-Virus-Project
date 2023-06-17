@@ -47,7 +47,7 @@ namespace O2_AV
                         messages = this.messages.Dequeue();
                     }
                 }
-                // messages[0] - log message | messages[1] - notifications message
+                //messages[0]-log message| messages[1]-notifications message
                 if (messages != null) 
                 {
                     string logMessage = $"{DateTime.Now} - {messages[0]}";
@@ -65,7 +65,8 @@ namespace O2_AV
                     {
                         form1.Invoke(new Action(() =>
                         {
-                            form1.WriteToDisplayTextBox(notificationsMessage + Environment.NewLine);
+                            form1.WriteToDisplayTextBox(notificationsMessage 
+                                + Environment.NewLine);
                         }));
                     }
                     
