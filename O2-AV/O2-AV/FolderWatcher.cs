@@ -15,7 +15,8 @@ namespace O2_AV
 
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File created");
+            FileToScan fts = new FileToScan(e.FullPath, 
+                "Reactive scan | Event: File created");
             engine.QueueFileForScan(fts);
         }
 
@@ -28,13 +29,15 @@ namespace O2_AV
 
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
-            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File renamed");
+            FileToScan fts = new FileToScan(e.FullPath, 
+                "Reactive scan | Event: File renamed");
             engine.QueueFileForScan(fts);
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            FileToScan fts = new FileToScan(e.FullPath, "Reactive scan | Event: File changed");
+            FileToScan fts = new FileToScan(e.FullPath, 
+                "Reactive scan | Event: File changed");
             engine.QueueFileForScan(fts);
         }
 

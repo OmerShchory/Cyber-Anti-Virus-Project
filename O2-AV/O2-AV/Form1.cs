@@ -1,18 +1,12 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Management;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace O2_AV
 {
     public partial class Form1 : Form
     {
-        // Engine need to be in the global namespace
         AVEngine engine;
         LogHandler logHandler;
         PortScanner portScanner;
@@ -68,10 +62,13 @@ namespace O2_AV
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 DialogResult result = folderDialog.ShowDialog();
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+                if (result == DialogResult.OK && 
+                    !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+
                 {
                     string selectedFolder = folderDialog.SelectedPath;
-                    string[] files = Directory.GetFiles(selectedFolder, "*", SearchOption.AllDirectories);
+                    string[] files = Directory.GetFiles(selectedFolder, "*", 
+                        SearchOption.AllDirectories);
 
                     string logMsg = "Directory initiated scan - started!";
                     string[] logMsgs = { logMsg, logMsg };
@@ -123,7 +120,8 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                string logMsg = $"An error occurred while trying to open the log file: {ex.Message}";
+                string logMsg = $"An error occurred while trying to open the log file:" +
+                    $" {ex.Message}";
                 // Handle any exceptions that might occur
                 string[] logMsgs = {logMsg, logMsg };
                 logHandler.QueueMessageToLog(logMsgs);
@@ -189,7 +187,8 @@ namespace O2_AV
                 // The user is trying to close the form, handle the event here
 
                 // You can display a confirmation dialog to confirm the shutdown
-                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?",
+                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No)
                 {
                     // Cancel the form closing event
@@ -220,7 +219,8 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // Handle any exceptions that might occur
-                string logMsg = $"An error occurred while trying to open Past Detections file: {ex.Message}";
+                string logMsg = $"An error occurred while trying to open Past Detections file: " +
+                    $"{ex.Message}";
                 if (isExpertMode)
                 {
                     string[] logMsgs = { logMsg, logMsg };

@@ -47,8 +47,8 @@ namespace O2_AV
                         messages = this.messages.Dequeue();
                     }
                 }
-
-                if (messages != null) // messages[0] - log message | messages[1] - notifications message
+                // messages[0] - log message | messages[1] - notifications message
+                if (messages != null) 
                 {
                     string logMessage = $"{DateTime.Now} - {messages[0]}";
                     string notificationsMessage = $"{DateTime.Now} - {messages[1]}";

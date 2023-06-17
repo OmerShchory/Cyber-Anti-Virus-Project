@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -67,14 +66,18 @@ namespace O2_AV
                     {
                         
                         string[] tokens = Regex.Split(row, "\\s+");
-                        if (tokens.Length > 4 && (tokens[1].Equals("UDP") || tokens[1].Equals("TCP")))
+                        if (tokens.Length > 4 && (tokens[1].Equals("UDP") || 
+                            tokens[1].Equals("TCP")))
                         {
-                            string localAddress = Regex.Replace(tokens[2], @"\[(.*?)\]", "1.1.1.1");
+                            string localAddress = Regex.Replace(tokens[2],
+                                @"\[(.*?)\]", "1.1.1.1");
 
-                            string protocol = localAddress.Contains("1.1.1.1") ? String.Format("{0}v6", tokens[1]) : String.Format("{0}v4", tokens[1]);
+                            string protocol = localAddress.Contains("1.1.1.1") ? 
+                                String.Format("{0}v6", tokens[1]) : String.Format("{0}v4", tokens[1]);
                             string openPort = localAddress.Split(':')[1];
 
-                            int pid = tokens[1] == "UDP" ? Convert.ToInt16(tokens[4]) : Convert.ToInt16(tokens[5]);
+                            int pid = tokens[1] == "UDP" ? Convert.ToInt16(tokens[4]) : 
+                                Convert.ToInt16(tokens[5]);
                             string state = tokens[4];
 
                             string processPath = GetProcessExecutablePath(pid);
@@ -84,9 +87,11 @@ namespace O2_AV
                                 // high CPU usage
                                 string processName = GetProcessName(pid);
                                 
-                                PortToScan pts = new PortToScan(protocol, localAddress, openPort, state, pid, processName, processPath);                                
+                                PortToScan pts = new PortToScan(protocol, localAddress, 
+                                    openPort, state, pid, processName, processPath);                                
                                 // Pushing the the engine
-                                this.engine.QueueFileForScan(new FileToScan(processPath, "Port Reactive Scan | " + pts.ToString()));  
+                                this.engine.QueueFileForScan(new FileToScan(processPath, 
+                                    "Port Reactive Scan | " + pts.ToString()));  
                             }
                         }
                     }
@@ -123,7 +128,8 @@ namespace O2_AV
         {
             try
             {
-                string wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = " + processId;
+                string wmiQueryString = "SELECT ProcessId, ExecutablePath " +
+                    "FROM Win32_Process WHERE ProcessId = " + processId;
                 using (var searcher = new ManagementObjectSearcher(wmiQueryString))
                 {
                     using (var results = searcher.Get())
