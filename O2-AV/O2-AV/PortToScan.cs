@@ -1,5 +1,4 @@
 ﻿
-
 namespace O2_AV
 {
     internal class PortToScan
@@ -12,7 +11,8 @@ namespace O2_AV
         private string processName;
         private string processPath;
 
-        public PortToScan(string protocol, string localAddress, string openPort, string state, 
+        public PortToScan(string protocol, string localAddress, 
+            string openPort, string state, 
             int pid, string processName, string processPath)
         {
             Protocol = protocol;
@@ -34,7 +34,9 @@ namespace O2_AV
 
         public override string ToString()
         {
-            return "Protocol: " + Protocol + " | " + "Local Address: " + LocalAddress + " | " + "Open Port: " + OpenPort + " | " + "State: " + State +
+            return "Protocol: " + Protocol + " | " + "Local Address: " + 
+                LocalAddress + " | " + "Open Port: " + 
+                OpenPort + " | " + "State: " + State +
                 " | " + "PID: " + Pid + " | " + "Process Name: " + ProcessName;
         }
     }

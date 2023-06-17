@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Threading;
 
@@ -47,14 +48,14 @@ namespace O2_AV
                         messages = this.messages.Dequeue();
                     }
                 }
-
-                if (messages != null) // messages[0] - log message | messages[1] - notifications message
+                //messages[0]-log message| messages[1]-notifications message
+                if (messages != null) 
                 {
                     string logMessage = $"{DateTime.Now} - {messages[0]}";
                     string notificationsMessage = $"{DateTime.Now} - {messages[1]}";
 
-                    // Lock the writerLock object to ensure only one thread will
-                    // get access to the streamWriter
+                    // Lock the writerLock object to ensure only
+                    // one thread will get access to the streamWriter
                     lock (writerLock)
                     {
                         writer.WriteLine(logMessage);
@@ -65,10 +66,11 @@ namespace O2_AV
                     {
                         form1.Invoke(new Action(() =>
                         {
-                            form1.WriteToDisplayTextBox(notificationsMessage + Environment.NewLine);
+                            form1.WriteToDisplayTextBox(notificationsMessage
+                                + Environment.NewLine);
                         }));
                     }
-                    
+
                 }
             }
         }

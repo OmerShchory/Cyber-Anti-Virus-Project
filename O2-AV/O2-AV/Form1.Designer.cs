@@ -110,6 +110,7 @@
             // 
             // displayTextBox
             // 
+            this.displayTextBox.ForeColor = System.Drawing.Color.Black;
             this.displayTextBox.Location = new System.Drawing.Point(390, 254);
             this.displayTextBox.Multiline = true;
             this.displayTextBox.Name = "displayTextBox";

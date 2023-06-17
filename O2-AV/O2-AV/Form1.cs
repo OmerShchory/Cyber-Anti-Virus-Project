@@ -1,18 +1,13 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Management;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace O2_AV
 {
     public partial class Form1 : Form
     {
-        // Engine need to be in the global namespace
         AVEngine engine;
         LogHandler logHandler;
         PortScanner portScanner;
@@ -40,46 +35,52 @@ namespace O2_AV
             this.processScanner = new ProcessScanner(this.engine);
             this.processScanner.Start();
 
-            // Start registry reactive scan for programs that register for automatic start up
+            // Start registry reactive scan for programs
+            // that register for automatic start up
             this.registryScan = new RegistryScan(this.engine, this.logHandler);
             this.registryScan.Start();
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
             watcher.Watch("./to scan");
-            //watcher.Watch(@"C:\Users\User\AppData");
-            //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
-            //watcher.Watch(@"C:\Program Files");
-            //watcher.Watch(@"C:\Program Files (x86)");
-            //watcher.Watch(@"C:\Users\User\Desktop");
-            //watcher.Watch(@"C:\Users\User\Downloads");
-            //watcher.Watch(@"C:\Users\User\Documents");
-            //watcher.Watch(@"C:\Windows");
-            //watcher.Watch(@"C:\Users\User\Pictures");
-            //watcher.Watch(@"C:\Users\User\Music");
-            //watcher.Watch(@"C:\Users\User\Videos");
+            watcher.Watch(@"C:\Users\User\AppData");
+            watcher.Watch(@"C:\Users\User\AppData\Roaming
+                \Microsoft\Windows\Start Menu\Programs\Startup");
+            watcher.Watch(@"C:\Program Files");
+            watcher.Watch(@"C:\Program Files (x86)");
+            watcher.Watch(@"C:\Users\User\Desktop");
+            watcher.Watch(@"C:\Users\User\Downloads");
+            watcher.Watch(@"C:\Users\User\Documents");
+            watcher.Watch(@"C:\Windows");
+            watcher.Watch(@"C:\Users\User\Pictures");
+            watcher.Watch(@"C:\Users\User\Music");
+            watcher.Watch(@"C:\Users\User\Videos");
 
             string logMmg = "O2-Anti-Virus has launched and started! Hurray!";
             string[] logMsgs = {logMmg,logMmg};
-            //logHandler.QueueMessageToLog(logMsgs);
         }
 
         private void FolderScanBtn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            using (FolderBrowserDialog folderDialog
+                = new FolderBrowserDialog())
             {
                 DialogResult result = folderDialog.ShowDialog();
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+                if (result == DialogResult.OK && 
+                    !string.IsNullOrWhiteSpace(folderDialog.SelectedPath))
+
                 {
                     string selectedFolder = folderDialog.SelectedPath;
-                    string[] files = Directory.GetFiles(selectedFolder, "*", SearchOption.AllDirectories);
+                    string[] files = Directory.GetFiles(selectedFolder, "*", 
+                        SearchOption.AllDirectories);
 
                     string logMsg = "Directory initiated scan - started!";
                     string[] logMsgs = { logMsg, logMsg };
                     this.logHandler.QueueMessageToLog(logMsgs);
                     foreach (string file in files)
                     {
-                        engine.QueueFileForScan(new FileToScan(file, "Initiated scan"));
+                        engine.QueueFileForScan(new FileToScan
+                            (file, "Initiated scan"));
                     }
 
                     logMsg = "Directory initiated scan - finished!";
@@ -124,7 +125,8 @@ namespace O2_AV
             }
             catch (Exception ex)
             {
-                string logMsg = $"An error occurred while trying to open the log file: {ex.Message}";
+                string logMsg = $"An error occurred while trying to open the log file:" +
+                    $" {ex.Message}";
                 // Handle any exceptions that might occur
                 string[] logMsgs = {logMsg, logMsg };
                 logHandler.QueueMessageToLog(logMsgs);
@@ -160,7 +162,7 @@ namespace O2_AV
 
         public void WriteToDisplayTextBox(string message)
         {
-            displayTextBox.Text += message + '\n'; 
+            displayTextBox.Text += message + '\n';
         }
 
         private void IsExpertModeChckbx_CheckedChanged(object sender, EventArgs e)
@@ -190,7 +192,8 @@ namespace O2_AV
                 // The user is trying to close the form, handle the event here
 
                 // You can display a confirmation dialog to confirm the shutdown
-                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?",
+                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No)
                 {
                     // Cancel the form closing event
@@ -221,7 +224,8 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // Handle any exceptions that might occur
-                string logMsg = $"An error occurred while trying to open Past Detections file: {ex.Message}";
+                string logMsg = $"An error occurred while trying to open Past Detections file: " +
+                    $"{ex.Message}";
                 if (isExpertMode)
                 {
                     string[] logMsgs = { logMsg, logMsg };

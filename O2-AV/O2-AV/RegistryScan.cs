@@ -36,19 +36,23 @@ namespace O2_AV
         {
             try
             {
-                const string keyPath = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
+                string keyPath = 
+                    @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
                 // Open the registry key that contains the startup programs
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(keyPath, false))
+                using(RegistryKey key = 
+                Registry.CurrentUser.OpenSubKey(keyPath, false))
                 {
                     if (key != null)
                     {
-                        // Get the list of value names (program names) under the startup registry key
+                        //Get the list of value names (program names)
+                        //under the startup registry key
                         string[] valueNames = key.GetValueNames();
 
                         foreach (string valueName in valueNames)
                         {
                             string programPath = key.GetValue(valueName)?.ToString();
-                            this.engine.QueueFileForScan(new FileToScan(programPath, "Reactive registry scan"));
+                            this.engine.QueueFileForScan
+                                (new FileToScan(programPath, "Reactive registry scan"));
                         }
                     }
                 }
@@ -56,7 +60,8 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // Handle any exceptions that occur during registry scanning
-                string logMsg = $"An error occurred during registry scan: {ex.Message}";
+                string logMsg = $"An error occurred during registry scan: " +
+                    $"{ex.Message}";
                 string[] logMsgs = { logMsg, logMsg };
                 this.LogHandler.QueueMessageToLog(logMsgs);
             }

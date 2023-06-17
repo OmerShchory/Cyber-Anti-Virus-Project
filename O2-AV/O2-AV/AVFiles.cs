@@ -35,14 +35,15 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // An exception occurred while writing to the log file
-                MessageBox.Show("An error occurred when trying to write to the log file",
+                MessageBox.Show("An error occurred when trying to " +
+                    "write to the log file",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public static void AppendNextDetection(string message)
         {
-            string FilePath = "./utils/PastDetections.txt";
+            string FilePath = "./utils/Past Detections.txt";
 
             try
             {
@@ -55,7 +56,8 @@ namespace O2_AV
             catch (Exception ex)
             {
                 // An exception occurred while writing to the log file
-                MessageBox.Show("An error occurred when trying to write to the Past Detections file",
+                MessageBox.Show("An error occurred when trying " +
+                    "to write to the Past Detections file",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

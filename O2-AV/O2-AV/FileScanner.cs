@@ -9,7 +9,6 @@ namespace O2_AV
 {
     internal class FileScanner
     {
-        //private static byte[] VIRUS_FILE = { 0x36, 0x1f, 0xad, 0xf1, 0xc7, 0x12, 0xe8, 0x12, 0xd1, 0x98, 0xc4, 0xca, 0xb5, 0x71, 0x2a, 0x79 };
         List<byte[]> blackList;
         List<byte[]> whiteList;
 
@@ -62,7 +61,7 @@ namespace O2_AV
                 {
                     if (CompareBytes(hash, this.whiteList[i]))
                     {
-                        // Return 2 if the file is detected as known non virus
+                        // Return 3 if the file is detected as non virus
                         res[0] = "3";
                         return res;
                     }
@@ -73,7 +72,8 @@ namespace O2_AV
                 double similarityRes = 0;
                 for (int i = 0; i < viruses.Count(); i++)
                 {
-                    similarityRes = Convert.ToDouble(RunPythonScript("./utils/similarity.py", filename, viruses[i]));
+                    similarityRes = Convert.ToDouble(RunPythonScript
+                        ("./utils/similarity.py", filename, viruses[i]));
                     if (similarityRes * 100 >= 60)
                     {
                         res[0] = "2";
@@ -111,13 +111,13 @@ namespace O2_AV
         }
 
         // Read the Black List from file and store it for comparisons
-        private static List<byte[]> ReadFromFileToList(string[] byteArrayFromFile)
+        private static List<byte[]> 
+            ReadFromFileToList(string[] byteArrayFromFile)
         {
             List<byte[]> listToReturn = new List<byte[]>();
             for (int i = 0; i < byteArrayFromFile.Length; i++)
             {
                 listToReturn.Add(ConvertHexStringToByteArray(byteArrayFromFile[i]));
-                //blackList.Add(lines[i].Split(",").Select(b => byte.Parse(b)).ToArray());
             }
             return listToReturn;
         }
@@ -130,16 +130,16 @@ namespace O2_AV
             psi.FileName = @"C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
             //psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
 
-            // 2) Provide script and arguments
+            // Provide script and arguments
             psi.Arguments = $"\"{pythonScript}\" \"{file1}\" \"{file2}\"";
 
-            // 3) Process configuration
+            // Process configuration
             psi.UseShellExecute = false;
             psi.CreateNoWindow = true;
             psi.RedirectStandardOutput = true;
             psi.RedirectStandardError = true;
 
-            // 4) Execute process and get output
+            // Execute process and get output
             var errors = "";
             var results = "";
             using (var process = Process.Start(psi)) 
