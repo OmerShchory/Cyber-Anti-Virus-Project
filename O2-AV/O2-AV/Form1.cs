@@ -46,6 +46,7 @@ namespace O2_AV
 
             // Initialize FS watcher
             FolderWatcher watcher = new FolderWatcher(this.engine,this.logHandler);
+            watcher.Watch("./to scan");
             //watcher.Watch(@"C:\Users\User\AppData");
             //watcher.Watch(@"C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
             //watcher.Watch(@"C:\Program Files");

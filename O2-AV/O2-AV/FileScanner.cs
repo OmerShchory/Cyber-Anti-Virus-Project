@@ -126,8 +126,8 @@ namespace O2_AV
             var psi = new ProcessStartInfo();
        
             //psi.FileName = @"C:\Users\user1\AppData\Local\Microsoft\WindowsApps\python.exe";
-            psi.FileName = @"C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
-            //psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
+            //psi.FileName = @"C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
+            psi.FileName = @"C:\\Users\\omrir\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe";
 
             // 2) Provide script and arguments
             psi.Arguments = $"\"{pythonScript}\" \"{file1}\" \"{file2}\"";
