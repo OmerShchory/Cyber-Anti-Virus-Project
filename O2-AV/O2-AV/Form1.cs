@@ -238,5 +238,12 @@ namespace O2_AV
             }
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string logFilePath = "./utils/log.txt";
+            File.WriteAllText(logFilePath, string.Empty);
+
+        }
     }
 }

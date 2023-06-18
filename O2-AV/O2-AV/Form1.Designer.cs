@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FormClosing += Form1_FormClosing;
             this.headerLbl = new System.Windows.Forms.Label();
             this.folderScanBtn = new System.Windows.Forms.Button();
             this.fileScanBtn = new System.Windows.Forms.Button();
@@ -161,6 +160,7 @@
             this.Controls.Add(this.headerLbl);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
