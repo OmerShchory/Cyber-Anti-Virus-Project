@@ -236,14 +236,6 @@ namespace O2_AV
                     logHandler.QueueMessageToLog(logMsgs);
                 }
             }
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            string logFilePath = "./utils/log.txt";
-            File.WriteAllText(logFilePath, string.Empty);
-
         }
     }
 }
